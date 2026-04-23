@@ -50,9 +50,9 @@ Result snapshot:
 
 Key assets:
 
-- [01_service_order_profitability_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/01_service_order_profitability_analysis.sql)
-- [fact_service_order.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/fact_service_order.csv)
-- [fact_cost_entry.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/fact_cost_entry.csv)
+- [01_service_order_profitability_analysis.sql](SQL_Challenges/01_service_order_profitability_analysis.sql)
+- [fact_service_order.csv](Synthetic_Data/fact_service_order.csv)
+- [fact_cost_entry.csv](Synthetic_Data/fact_cost_entry.csv)
 
 ### 2. Maker Info Operational Dashboard and Recall Intelligence
 
@@ -74,9 +74,9 @@ Result snapshot:
 
 Key assets:
 
-- [Dashboards/README.md](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Dashboards/README.md)
-- [02_operational_sla_backlog_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/02_operational_sla_backlog_analysis.sql)
-- [03_customer_recall_reactivation_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/03_customer_recall_reactivation_analysis.sql)
+- [Dashboards/README.md](Dashboards/README.md)
+- [02_operational_sla_backlog_analysis.sql](SQL_Challenges/02_operational_sla_backlog_analysis.sql)
+- [03_customer_recall_reactivation_analysis.sql](SQL_Challenges/03_customer_recall_reactivation_analysis.sql)
 
 ### 3. Service Order Data Quality Pipeline
 
@@ -95,9 +95,9 @@ Result snapshot:
 
 Key assets:
 
-- [clean_service_orders_data.py](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Python_Automation/clean_service_orders_data.py)
-- [service_orders_raw.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/service_orders_raw.csv)
-- [service_orders_clean.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/service_orders_clean.csv)
+- [clean_service_orders_data.py](Python_Automation/clean_service_orders_data.py)
+- [service_orders_raw.csv](Synthetic_Data/service_orders_raw.csv)
+- [service_orders_clean.csv](Synthetic_Data/service_orders_clean.csv)
 
 ## Databricks Mini Pipeline
 
@@ -111,8 +111,8 @@ What it does:
 
 Key assets:
 
-- [Databricks_Pipeline/README.md](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Databricks_Pipeline/README.md)
-- [maker_info_medallion_pipeline.py](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Databricks_Pipeline/maker_info_medallion_pipeline.py)
+- [Databricks_Pipeline/README.md](Databricks_Pipeline/README.md)
+- [maker_info_medallion_pipeline.py](Databricks_Pipeline/maker_info_medallion_pipeline.py)
 
 ## Repository Structure
 
