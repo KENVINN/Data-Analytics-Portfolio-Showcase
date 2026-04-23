@@ -2,17 +2,34 @@
 
 Solving business problems through data, process intelligence, and decision-ready analytics.
 
-I am a data professional focused on turning operational complexity into clear business decisions. This public portfolio was designed to showcase how I approach SQL problem-solving, Python automation, data modeling, and dashboard design for international Data Analyst and Business Intelligence opportunities.
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?logo=powerbi&logoColor=black)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?logo=databricks&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+
+This public portfolio showcases how I approach SQL problem-solving, Python automation, dashboard design, and data modeling in business-facing analytics scenarios.
 
 All examples in this repository use synthetic scenarios and fictitious entities only. The portfolio is centered on a fictitious analytical version of the Maker Info service operations system, with no sensitive, proprietary, or real company data included.
 
+## About Me
+
+I am a Brazil-based data professional with a background that combines Analysis and Systems Development (ADS), BI internship experience, and founder-led operational work. I enjoy translating workflow friction into structured datasets, business KPIs, and decision-ready reporting.
+
+This portfolio is designed for international Data Analyst and Business Intelligence opportunities, especially roles connected to operations, service performance, profitability, and decision support. Working languages: Portuguese, English, and Spanish.
+
 ## Tech Stack
 
-- `SQL`: analytical querying, CTEs, window functions, business logic translation, and KPI calculation
-- `Python`: data cleaning, automation, reproducible transformations, and pandas-based workflows
-- `Power BI`: executive dashboards, self-service reporting, KPI storytelling, and usability-first design
-- `Databricks`: scalable data pipelines, notebook-driven exploration, and medallion-style thinking
-- `Git`: version control, documentation discipline, and collaborative development practices
+- `SQL`: analytical querying, CTEs, joins, window functions, KPI logic, and operational analysis
+- `Python`: pandas-based cleaning, automation workflows, reproducible data preparation, and portfolio generators
+- `Power BI`: executive dashboards, operational scorecards, KPI storytelling, and UX-first layout decisions
+- `Databricks`: notebook-based exploration, bronze/silver/gold pipeline design, and Delta-oriented thinking
+- `Git`: version control, clear documentation, and public portfolio publishing
+
+## Certifications
+
+- Microsoft Power BI Professional Certificate `(Coursera, in progress - 2026)`
+- Introduction to Data Science `(IE University / Santander - 2026)`
 
 ## Featured Projects
 
@@ -20,23 +37,82 @@ All examples in this repository use synthetic scenarios and fictitious entities 
 
 Synthetic analytics case focused on operational and financial visibility for a repair and support management system.
 
+Business questions:
+
 - Which service lines generate the best margin after linked and unlinked costs?
 - Which client accounts are leaking profitability due to stalled orders or unassigned expenses?
 - Which operational patterns should managers prioritize to protect cash flow?
 
-Technical highlights:
+Result snapshot:
 
-- Dimensional thinking around service orders, status history, costs, customers, and technicians
-- Advanced SQL with multi-step CTEs, joins, window functions, and profitability bridges
-- KPI design for margin, backlog aging, SLA attainment, quote recovery, and recall actions
+- `B2B Support` and `Computer Repair` represent `82.8%` of allocated unlinked cost leakage in the synthetic environment.
+- The weakest closed service-line snapshot is `Verde Health Clinic / Onsite Visit`, finishing at only `4.0%` net margin.
+
+Key assets:
+
+- [01_service_order_profitability_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/01_service_order_profitability_analysis.sql)
+- [fact_service_order.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/fact_service_order.csv)
+- [fact_cost_entry.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/fact_cost_entry.csv)
 
 ### 2. Maker Info Operational Dashboard and Recall Intelligence
 
 Synthetic BI case built around the daily decision layer of the Maker Info system.
 
-- Tracks revenue, cost leakage, SLA compliance, backlog aging, quote approval, and recall opportunity
-- Organizes KPIs for executive overview, operational diagnosis, and daily team action
-- Applies UX principles for fast scanning, drill-down clarity, and trustworthy data storytelling
+Business questions:
+
+- Where is backlog aging accumulating and which queues deserve immediate intervention?
+- Which KPIs should appear first for managers monitoring margin, SLA, and recall opportunities?
+- How should dashboard UX support both executive scan speed and operational drill-down?
+
+Result snapshot:
+
+- The active backlog contains `22` orders, and all `22` are already older than `72h`.
+- `in_repair` is the largest stalled status bucket with `9` orders, making it the first queue to review.
+
+![Executive Overview](Dashboards/assets/dashboard-executive-overview.jpg)
+![Operational Input](Dashboards/assets/dashboard-operational-input.jpg)
+
+Key assets:
+
+- [Dashboards/README.md](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Dashboards/README.md)
+- [02_operational_sla_backlog_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/02_operational_sla_backlog_analysis.sql)
+- [03_customer_recall_reactivation_analysis.sql](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/SQL_Challenges/03_customer_recall_reactivation_analysis.sql)
+
+### 3. Service Order Data Quality Pipeline
+
+Python-based cleaning workflow built to normalize raw operational exports before analysis or BI consumption.
+
+Business questions:
+
+- How can a messy CSV export become a reliable analytical dataset?
+- Which fields need canonical status mapping, numeric normalization, and risk flags?
+- How can the same cleaned dataset support both dashboarding and downstream pipeline work?
+
+Result snapshot:
+
+- The cleaning workflow standardized `72` raw service orders into `6` canonical statuses.
+- The cleaned dataset surfaced `31` `critical_delay` records and `36` `sla_breached` orders for monitoring.
+
+Key assets:
+
+- [clean_service_orders_data.py](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Python_Automation/clean_service_orders_data.py)
+- [service_orders_raw.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/service_orders_raw.csv)
+- [service_orders_clean.csv](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Synthetic_Data/service_orders_clean.csv)
+
+## Databricks Mini Pipeline
+
+To support the Databricks item in the stack with a concrete artifact, this repository also includes a small notebook-source PySpark pipeline that reads the cleaned service order dataset and organizes it into bronze, silver, and gold layers.
+
+What it does:
+
+- Reads `service_orders_clean.csv` into a bronze Delta table
+- Builds a typed silver operational order table
+- Publishes `gold_daily_operations_kpis` and `gold_company_profitability`
+
+Key assets:
+
+- [Databricks_Pipeline/README.md](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Databricks_Pipeline/README.md)
+- [maker_info_medallion_pipeline.py](/Users/kevin/maker-info-express/Data-Analytics-Portfolio-Showcase/Databricks_Pipeline/maker_info_medallion_pipeline.py)
 
 ## Repository Structure
 
@@ -52,6 +128,9 @@ Data-Analytics-Portfolio-Showcase/
 |-- Python_Automation/
 |   |-- clean_service_orders_data.py
 |   `-- generate_synthetic_portfolio_data.py
+|-- Databricks_Pipeline/
+|   |-- README.md
+|   `-- maker_info_medallion_pipeline.py
 |-- Synthetic_Data/
 |   |-- README.md
 |   |-- dim_company.csv
@@ -91,17 +170,11 @@ python Python_Automation/clean_service_orders_data.py \
   --reference-date 2026-04-15
 ```
 
-## How This Portfolio Creates Business Value
-
-- Translates business questions into structured analytical logic
-- Designs datasets and KPIs that support decision-making instead of vanity reporting
-- Builds maintainable code that can move from analysis to production workflows
-- Connects technical execution with stakeholder communication and business impact
-
 ## Professional Objective
 
-I am pursuing opportunities where data can improve prioritization, operational visibility, and data-driven decision support across business, product, operations, or service teams.
+I am pursuing Data Analyst and Business Intelligence roles in the international market, especially positions focused on operational analytics, service performance, margin visibility, and data-driven decision support. I am comfortable working across Portuguese, English, and Spanish environments.
 
 ## Contact
 
-- LinkedIn: [linkedin.com/in/kevin-savio-data](https://www.linkedin.com/in/kevin-savio-data/)
+- LinkedIn: [Kevin Savio on LinkedIn](https://www.linkedin.com/in/kevin-savio-data/)
+- Email: [kevinsavio514@gmail.com](mailto:kevinsavio514@gmail.com)
