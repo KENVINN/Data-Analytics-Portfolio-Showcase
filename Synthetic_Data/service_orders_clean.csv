@@ -1,0 +1,73 @@
+order_id,customer_name,phone_number,company_name,service_line,device_type,current_status,opened_at,closed_at,quoted_amount_brl,approved_revenue_brl,technician_name,city,sla_target_hours,hours_open,hours_to_close,revenue_realization_gap_brl,is_b2b_account,order_health_flag
+SO0044,Jordan Perry,5565967241912,Atlas Logistics Hub,B2B Support,Notebook,awaiting_part,2026-02-20 12:45:00,,1110.0,1070.0,Morgan Reed,Varzea Grande,24,1307.23,,40.0,True,critical_delay
+SO0011,Jordan Perry,5565967241912,Atlas Logistics Hub,B2B Support,Network Router,awaiting_part,2026-01-21 11:15:00,,1235.0,1195.0,Avery Cole,Varzea Grande,48,2028.73,,40.0,True,critical_delay
+SO0071,Casey Parker,5565950986743,Atlas Logistics Hub,B2B Support,Network Router,delivered,2026-03-22 15:15:00,2026-03-27 21:15:00,1235.0,1190.0,Avery Cole,Varzea Grande,48,126.0,126.0,45.0,True,sla_breached
+SO0064,Taylor Price,5565950815179,Atlas Logistics Hub,B2B Support,Notebook,delivered,2026-03-14 08:45:00,2026-03-18 21:45:00,1180.0,1180.0,Morgan Reed,Varzea Grande,24,109.0,109.0,0.0,True,sla_breached
+SO0051,Morgan Ward,5565971557534,Atlas Logistics Hub,B2B Support,Network Router,delivered,2026-02-28 11:15:00,2026-03-04 19:15:00,1165.0,1120.0,Avery Cole,Varzea Grande,48,104.0,104.0,45.0,True,sla_breached
+SO0038,Riley Gray,5565989093446,Atlas Logistics Hub,Onsite Visit,Office Notebook,delivered,2026-02-14 14:45:00,2026-02-18 17:45:00,910.0,880.0,Taylor Brooks,Varzea Grande,24,99.0,99.0,30.0,True,sla_breached
+SO0031,Taylor Price,5565950815179,Atlas Logistics Hub,B2B Support,Network Router,delivered,2026-02-06 15:15:00,2026-02-10 01:15:00,1095.0,1050.0,Avery Cole,Varzea Grande,48,82.0,82.0,45.0,True,sla_breached
+SO0024,Alex Mason,65979646189,Atlas Logistics Hub,B2B Support,Notebook,delivered,2026-01-29 08:45:00,2026-02-01 01:45:00,1040.0,1040.0,Morgan Reed,Varzea Grande,24,65.0,65.0,0.0,True,sla_breached
+SO0018,Casey Parker,65950986743,Atlas Logistics Hub,Onsite Visit,Network Router,ready_for_pickup,2026-01-23 10:45:00,,830.0,810.0,Taylor Brooks,Varzea Grande,24,1981.23,,20.0,True,critical_delay
+SO0066,Jordan Perry,65991377272,Nova Realty Partners,Onsite Visit,Network Router,awaiting_part,2026-03-12 10:45:00,,830.0,810.0,Avery Cole,Rondonopolis,24,829.23,,20.0,True,critical_delay
+SO0033,Taylor Price,5565920175855,Nova Realty Partners,Computer Repair,Desktop,awaiting_part,2026-02-10 09:15:00,,595.0,575.0,Taylor Brooks,Rondonopolis,48,1550.73,,20.0,True,critical_delay
+SO0039,Harper Diaz,5565940959517,Nova Realty Partners,B2B Support,Network Router,cancelled,2026-02-16 15:15:00,,1165.0,0.0,Morgan Reed,Rondonopolis,48,1400.73,,1165.0,True,critical_delay
+SO0026,Blake Turner,5565941185713,Nova Realty Partners,Onsite Visit,Office Notebook,cancelled,2026-02-02 10:45:00,,910.0,0.0,Avery Cole,Rondonopolis,24,1741.23,,910.0,True,critical_delay
+SO0013,Jordan Perry,5565991377272,Nova Realty Partners,Computer Repair,Desktop,cancelled,2026-01-19 13:15:00,,525.0,0.0,Taylor Brooks,Rondonopolis,48,2074.73,,525.0,True,critical_delay
+SO0059,Skyler Jordan,5565923867081,Nova Realty Partners,B2B Support,Network Router,delivered,2026-03-10 11:15:00,2026-03-15 18:15:00,1235.0,1190.0,Morgan Reed,Rondonopolis,48,127.0,127.0,45.0,True,sla_breached
+SO0046,Alex Mason,5565924825345,Nova Realty Partners,Onsite Visit,Pos Terminal,delivered,2026-02-24 14:45:00,2026-02-28 13:45:00,1010.0,980.0,Avery Cole,Rondonopolis,24,95.0,95.0,30.0,True,sla_breached
+SO0006,Skyler Jordan,65923867081,Nova Realty Partners,Onsite Visit,Network Router,delivered,2026-01-11 14:45:00,2026-01-13 17:45:00,830.0,800.0,Avery Cole,Rondonopolis,24,51.0,51.0,30.0,True,sla_breached
+SO0072,Harper Diaz,65940959517,Nova Realty Partners,B2B Support,Notebook,ready_for_pickup,2026-03-18 08:45:00,,1040.0,1020.0,Jordan Ellis,Rondonopolis,24,687.23,,20.0,True,critical_delay
+SO0069,Riley Gray,5565976861478,Orion Legal Group,Computer Repair,Desktop,delivered,2026-03-18 13:15:00,2026-03-23 21:15:00,595.0,580.0,Morgan Reed,Cuiaba,48,128.0,128.0,15.0,True,sla_breached
+SO0043,Drew Hayes,5565946376626,Orion Legal Group,B2B Support,Network Router,delivered,2026-02-18 11:15:00,2026-02-22 06:15:00,1095.0,1050.0,Taylor Brooks,Cuiaba,48,91.0,91.0,45.0,True,sla_breached
+SO0029,Morgan Ward,5565945433936,Orion Legal Group,Computer Repair,Desktop,delivered,2026-02-08 13:15:00,2026-02-12 01:15:00,665.0,650.0,Morgan Reed,Cuiaba,48,84.0,84.0,15.0,True,sla_breached
+SO0023,Cameron Carter,5565938647907,Orion Legal Group,B2B Support,Network Router,delivered,2026-02-02 15:15:00,2026-02-05 12:15:00,1235.0,1190.0,Taylor Brooks,Cuiaba,48,69.0,69.0,45.0,True,sla_breached
+SO0016,Riley Gray,5565976861478,Orion Legal Group,B2B Support,Notebook,delivered,2026-01-25 08:45:00,2026-01-28 11:45:00,1180.0,1180.0,Avery Cole,Cuiaba,24,75.0,75.0,0.0,True,sla_breached
+SO0003,Jamie Morris,5565999744803,Orion Legal Group,B2B Support,Network Router,delivered,2026-01-11 11:15:00,2026-01-13 10:15:00,1165.0,1120.0,Taylor Brooks,Cuiaba,48,47.0,47.0,45.0,True,on_track
+SO0056,Cameron Carter,5565938647907,Orion Legal Group,B2B Support,Notebook,in_repair,2026-03-04 08:45:00,,1110.0,1070.0,Avery Cole,Cuiaba,24,1023.23,,40.0,True,critical_delay
+SO0049,Casey Parker,5565917152753,Orion Legal Group,Computer Repair,Desktop,in_repair,2026-02-24 09:15:00,,525.0,495.0,Morgan Reed,Cuiaba,48,1214.73,,30.0,True,critical_delay
+SO0036,Jamie Morris,65999744803,Orion Legal Group,B2B Support,Notebook,ready_for_pickup,2026-02-10 12:45:00,,1040.0,1020.0,Avery Cole,Cuiaba,24,1547.23,,20.0,True,critical_delay
+SO0065,Avery Brooks,5565970021493,Prime Edu Center,Computer Repair,Desktop,cancelled,2026-03-16 09:15:00,,665.0,0.0,Cameron Shaw,Sinop,72,734.73,,665.0,True,critical_delay
+SO0052,Logan Bennett,5565924092173,Prime Edu Center,B2B Support,Notebook,cancelled,2026-03-02 12:45:00,,1180.0,0.0,Jordan Ellis,Sinop,24,1067.23,,1180.0,True,critical_delay
+SO0058,Jamie Morris,5565986298972,Prime Edu Center,Onsite Visit,Pos Terminal,delivered,2026-03-08 10:45:00,2026-03-13 11:45:00,1010.0,980.0,Taylor Brooks,Sinop,24,121.0,121.0,30.0,True,sla_breached
+SO0032,Parker Reed,5565954916956,Prime Edu Center,B2B Support,Notebook,delivered,2026-02-08 08:45:00,2026-02-11 17:45:00,1110.0,1110.0,Jordan Ellis,Sinop,24,81.0,81.0,0.0,True,sla_breached
+SO0025,Cameron Carter,5565983773110,Prime Edu Center,Computer Repair,Desktop,delivered,2026-01-31 09:15:00,2026-02-03 13:15:00,525.0,510.0,Cameron Shaw,Sinop,72,76.0,76.0,15.0,True,sla_breached
+SO0019,Logan Bennett,5565924092173,Prime Edu Center,B2B Support,Network Router,delivered,2026-01-25 11:15:00,2026-01-28 22:15:00,1095.0,1050.0,Morgan Reed,Sinop,48,83.0,83.0,45.0,True,sla_breached
+SO0012,Avery Brooks,65970021493,Prime Edu Center,B2B Support,Notebook,delivered,2026-01-17 12:45:00,2026-01-19 23:45:00,1040.0,1040.0,Jordan Ellis,Sinop,24,59.0,59.0,0.0,True,sla_breached
+SO0005,Jamie Morris,5565986298972,Prime Edu Center,Computer Repair,Desktop,delivered,2026-01-15 13:15:00,2026-01-18 01:15:00,665.0,650.0,Cameron Shaw,Sinop,72,60.0,60.0,15.0,True,on_track
+SO0045,Drew Hayes,5565910313088,Prime Edu Center,Computer Repair,Desktop,quote_rejected,2026-02-22 13:15:00,,595.0,0.0,Cameron Shaw,Sinop,72,1258.73,,595.0,True,critical_delay
+SO0055,Blake Turner,5565938744594,Retail Direct,Computer Repair,Printer,awaiting_part,2026-03-02 15:15:00,,565.0,535.0,Cameron Shaw,Cuiaba,72,1064.73,,30.0,False,critical_delay
+SO0022,Alex Mason,5565921372005,Retail Direct,Computer Repair,All In One,awaiting_part,2026-01-31 14:45:00,,650.0,620.0,Jordan Ellis,Cuiaba,48,1785.23,,30.0,False,critical_delay
+SO0068,Skyler Jordan,5565999636544,Retail Direct,Computer Repair,Notebook,delivered,2026-03-16 12:45:00,2026-03-21 16:45:00,610.0,610.0,Taylor Brooks,Cuiaba,48,124.0,124.0,0.0,False,sla_breached
+SO0067,Riley Gray,5565921729252,Retail Direct,Computer Repair,Printer,delivered,2026-03-14 11:15:00,2026-03-19 11:15:00,565.0,520.0,Jordan Ellis,Cuiaba,48,120.0,120.0,45.0,False,sla_breached
+SO0062,Taylor Price,5565959584595,Retail Direct,Computer Repair,All In One,delivered,2026-03-10 14:45:00,2026-03-15 03:45:00,580.0,550.0,Jordan Ellis,Cuiaba,48,109.0,109.0,30.0,False,sla_breached
+SO0061,Parker Reed,5565928432506,Retail Direct,Computer Repair,Desktop,delivered,2026-03-08 13:15:00,2026-03-12 22:15:00,525.0,510.0,Avery Cole,Cuiaba,48,105.0,105.0,15.0,False,sla_breached
+SO0053,Alex Mason,5565970932345,Retail Direct,Computer Repair,Desktop,delivered,2026-03-04 13:15:00,2026-03-09 05:15:00,665.0,650.0,Taylor Brooks,Cuiaba,48,112.0,112.0,15.0,False,sla_breached
+SO0047,Casey Parker,5565937485617,Retail Direct,Computer Repair,Printer,delivered,2026-02-26 15:15:00,2026-03-02 17:15:00,705.0,660.0,Jordan Ellis,Cuiaba,48,98.0,98.0,45.0,False,sla_breached
+SO0048,Harper Diaz,65947825555,Retail Direct,Mobile Repair,Smartphone,delivered,2026-02-22 08:45:00,2026-02-26 14:45:00,440.0,440.0,Taylor Brooks,Cuiaba,48,102.0,102.0,0.0,False,sla_breached
+SO0041,Avery Brooks,5565969247059,Retail Direct,Computer Repair,Desktop,delivered,2026-02-20 09:15:00,2026-02-23 20:15:00,665.0,650.0,Avery Cole,Cuiaba,48,83.0,83.0,15.0,False,sla_breached
+SO0040,Taylor Price,5565927627319,Retail Direct,Computer Repair,Notebook,delivered,2026-02-18 08:45:00,2026-02-21 16:45:00,680.0,680.0,Cameron Shaw,Cuiaba,72,80.0,80.0,0.0,False,sla_breached
+SO0034,Jamie Morris,5565913853076,Retail Direct,Computer Repair,All In One,delivered,2026-02-12 10:45:00,2026-02-16 08:45:00,650.0,620.0,Morgan Reed,Cuiaba,48,94.0,94.0,30.0,False,sla_breached
+SO0020,Jordan Perry,5565928294712,Retail Direct,Computer Repair,Notebook,delivered,2026-01-27 12:45:00,2026-01-30 04:45:00,610.0,610.0,Cameron Shaw,Cuiaba,72,64.0,64.0,0.0,False,on_track
+SO0008,Parker Reed,5565928432506,Retail Direct,Computer Repair,Notebook,delivered,2026-01-15 08:45:00,2026-01-18 03:45:00,610.0,610.0,Taylor Brooks,Cuiaba,48,67.0,67.0,0.0,False,sla_breached
+SO0002,Blake Turner,5565938744594,Retail Direct,Computer Repair,All In One,delivered,2026-01-09 10:45:00,2026-01-11 05:45:00,580.0,550.0,Jordan Ellis,Cuiaba,48,43.0,43.0,30.0,False,on_track
+SO0001,Cameron Carter,5565911126435,Retail Direct,Computer Repair,Desktop,delivered,2026-01-07 09:15:00,2026-01-09 00:15:00,525.0,510.0,Avery Cole,Cuiaba,48,39.0,39.0,15.0,False,on_track
+SO0042,Jordan Perry,65986532908,Retail Direct,Mobile Repair,Smartphone,in_repair,2026-02-16 10:45:00,,440.0,420.0,Jordan Ellis,Cuiaba,48,1405.23,,20.0,False,critical_delay
+SO0035,Skyler Jordan,5565999636544,Retail Direct,Computer Repair,Printer,in_repair,2026-02-14 11:15:00,,705.0,665.0,Cameron Shaw,Cuiaba,72,1452.73,,40.0,False,critical_delay
+SO0028,Logan Bennett,5565964044307,Retail Direct,Computer Repair,Notebook,in_repair,2026-02-06 12:45:00,,680.0,650.0,Taylor Brooks,Cuiaba,48,1643.23,,30.0,False,critical_delay
+SO0021,Drew Hayes,5565967596009,Retail Direct,Mobile Repair,Tablet,in_repair,2026-01-29 13:15:00,,505.0,485.0,Avery Cole,Cuiaba,48,1834.73,,20.0,False,critical_delay
+SO0014,Riley Gray,5565921729252,Retail Direct,Computer Repair,All In One,in_repair,2026-01-21 14:45:00,,580.0,540.0,Morgan Reed,Cuiaba,48,2025.23,,40.0,False,critical_delay
+SO0007,Taylor Price,5565927627319,Retail Direct,Computer Repair,Printer,in_repair,2026-01-13 15:15:00,,565.0,535.0,Jordan Ellis,Cuiaba,48,2216.73,,30.0,False,critical_delay
+SO0060,Morgan Ward,65939254104,Retail Direct,Mobile Repair,Smartphone,quote_rejected,2026-03-06 12:45:00,,440.0,0.0,Cameron Shaw,Cuiaba,48,971.23,,440.0,False,critical_delay
+SO0015,Harper Diaz,5565947825555,Retail Direct,Mobile Repair,Tablet,quote_rejected,2026-01-23 15:15:00,,505.0,0.0,Cameron Shaw,Cuiaba,48,1976.73,,505.0,False,critical_delay
+SO0054,Cameron Carter,65911126435,Retail Direct,Mobile Repair,Smartphone,ready_for_pickup,2026-02-28 14:45:00,,440.0,420.0,Morgan Reed,Cuiaba,48,1113.23,,20.0,False,critical_delay
+SO0027,Morgan Ward,5565939254104,Retail Direct,Mobile Repair,Tablet,ready_for_pickup,2026-02-04 11:15:00,,505.0,485.0,Jordan Ellis,Cuiaba,48,1692.73,,20.0,False,critical_delay
+SO0009,Taylor Price,5565959584595,Retail Direct,Mobile Repair,Tablet,ready_for_pickup,2026-01-17 09:15:00,,505.0,485.0,Morgan Reed,Cuiaba,48,2126.73,,20.0,False,critical_delay
+SO0057,Blake Turner,5565954846767,Verde Health Clinic,Computer Repair,Desktop,delivered,2026-03-06 09:15:00,2026-03-11 08:15:00,595.0,580.0,Jordan Ellis,Cuiaba,48,119.0,119.0,15.0,True,sla_breached
+SO0050,Logan Bennett,5565978883543,Verde Health Clinic,Onsite Visit,Office Notebook,delivered,2026-02-26 10:45:00,2026-03-02 09:45:00,910.0,880.0,Cameron Shaw,Cuiaba,24,95.0,95.0,30.0,True,sla_breached
+SO0037,Skyler Jordan,5565977278872,Verde Health Clinic,Computer Repair,Desktop,delivered,2026-02-12 13:15:00,2026-02-16 14:15:00,525.0,510.0,Jordan Ellis,Cuiaba,48,97.0,97.0,15.0,True,sla_breached
+SO0017,Harper Diaz,5565961585617,Verde Health Clinic,Computer Repair,Desktop,delivered,2026-01-27 09:15:00,2026-01-30 21:15:00,665.0,650.0,Jordan Ellis,Cuiaba,48,84.0,84.0,15.0,True,sla_breached
+SO0010,Avery Brooks,5565992292483,Verde Health Clinic,Onsite Visit,Pos Terminal,delivered,2026-01-19 10:45:00,2026-01-21 19:45:00,1010.0,980.0,Cameron Shaw,Cuiaba,24,57.0,57.0,30.0,True,sla_breached
+SO0004,Blake Turner,5565954846767,Verde Health Clinic,B2B Support,Notebook,delivered,2026-01-13 12:45:00,2026-01-15 13:45:00,1180.0,1180.0,Morgan Reed,Cuiaba,24,49.0,49.0,0.0,True,sla_breached
+SO0070,Harper Diaz,5565961585617,Verde Health Clinic,Onsite Visit,Pos Terminal,in_repair,2026-03-20 14:45:00,,1010.0,980.0,Cameron Shaw,Cuiaba,24,633.23,,30.0,True,critical_delay
+SO0030,Parker Reed,65959027731,Verde Health Clinic,Onsite Visit,Network Router,quote_rejected,2026-02-04 14:45:00,,830.0,0.0,Cameron Shaw,Cuiaba,24,1689.23,,830.0,True,critical_delay
+SO0063,Avery Brooks,5565992292483,Verde Health Clinic,B2B Support,Network Router,ready_for_pickup,2026-03-12 15:15:00,,1165.0,1145.0,Taylor Brooks,Cuiaba,48,824.73,,20.0,True,critical_delay

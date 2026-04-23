@@ -4,8 +4,9 @@ Generate deterministic synthetic datasets for the portfolio showcase.
 Example:
     python generate_synthetic_portfolio_data.py
 
-This script creates fictitious CSV files for gym analytics, SaaS revenue,
-and IT service operations. All entities, names, and business events are synthetic.
+This script creates fictitious CSV files for a Maker Info-style service
+operations system, including service orders, cost control, SLA tracking,
+and customer recall workflows. All entities, names, and business events are synthetic.
 """
 
 from __future__ import annotations
@@ -19,55 +20,112 @@ SEED = 20260423
 REFERENCE_DATE = date(2026, 4, 15)
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "Synthetic_Data"
 
-PLAN_PRICES = {
-    "Basic": 79.0,
-    "Premium": 129.0,
-    "Premium Plus": 179.0,
-    "Corporate": 249.0,
-}
-
-SAAS_PLAN_MRR = {
-    "starter": 250,
-    "growth": 650,
-    "professional": 1250,
-    "enterprise": 2400,
-}
-
-PARTNERS = [
-    {"partner_id": "P001", "partner_name": "North Peak Fitness", "region": "North", "contract_status": "active"},
-    {"partner_id": "P002", "partner_name": "Atlas Wellness Club", "region": "Midwest", "contract_status": "active"},
-    {"partner_id": "P003", "partner_name": "Blue Harbor Gym", "region": "South", "contract_status": "active"},
-    {"partner_id": "P004", "partner_name": "Urban Motion Hub", "region": "West", "contract_status": "active"},
-    {"partner_id": "P005", "partner_name": "Prime Core Studio", "region": "East", "contract_status": "active"},
+COMPANIES = [
+    {
+        "company_id": "CO001",
+        "company_name": "Retail Direct",
+        "account_type": "Retail",
+        "city": "Cuiaba",
+        "region": "Midwest",
+        "contract_status": "active",
+    },
+    {
+        "company_id": "CO002",
+        "company_name": "Orion Legal Group",
+        "account_type": "B2B",
+        "city": "Cuiaba",
+        "region": "Midwest",
+        "contract_status": "active",
+    },
+    {
+        "company_id": "CO003",
+        "company_name": "Verde Health Clinic",
+        "account_type": "B2B",
+        "city": "Cuiaba",
+        "region": "Midwest",
+        "contract_status": "active",
+    },
+    {
+        "company_id": "CO004",
+        "company_name": "Atlas Logistics Hub",
+        "account_type": "B2B",
+        "city": "Varzea Grande",
+        "region": "Midwest",
+        "contract_status": "active",
+    },
+    {
+        "company_id": "CO005",
+        "company_name": "Prime Edu Center",
+        "account_type": "B2B",
+        "city": "Sinop",
+        "region": "North",
+        "contract_status": "active",
+    },
+    {
+        "company_id": "CO006",
+        "company_name": "Nova Realty Partners",
+        "account_type": "B2B",
+        "city": "Rondonopolis",
+        "region": "South",
+        "contract_status": "active",
+    },
 ]
 
-SAAS_ACCOUNTS = [
-    ("A001", "Nova Desk", "North America", "Healthcare"),
-    ("A002", "Bright Metrics", "North America", "Retail"),
-    ("A003", "Cloud Harbor", "Europe", "Technology"),
-    ("A004", "Summit Care", "Europe", "Healthcare"),
-    ("A005", "Orbit Field", "Latin America", "Logistics"),
-    ("A006", "Signal Forge", "North America", "Manufacturing"),
-    ("A007", "Clear Ledger", "Europe", "Finance"),
-    ("A008", "Pulse Transit", "Latin America", "Mobility"),
+TECHNICIANS = [
+    {
+        "technician_id": "TECH001",
+        "technician_name": "Avery Cole",
+        "squad_name": "Workshop",
+        "specialty": "Computer Repair",
+    },
+    {
+        "technician_id": "TECH002",
+        "technician_name": "Jordan Ellis",
+        "squad_name": "Workshop",
+        "specialty": "Mobile Repair",
+    },
+    {
+        "technician_id": "TECH003",
+        "technician_name": "Taylor Brooks",
+        "squad_name": "Field Support",
+        "specialty": "Onsite Support",
+    },
+    {
+        "technician_id": "TECH004",
+        "technician_name": "Morgan Reed",
+        "squad_name": "B2B Operations",
+        "specialty": "Contract Accounts",
+    },
+    {
+        "technician_id": "TECH005",
+        "technician_name": "Cameron Shaw",
+        "squad_name": "Workshop",
+        "specialty": "Mixed Devices",
+    },
 ]
 
-SAAS_ACCOUNT_SEQUENCES = {
-    "A001": ["growth", "growth", "professional", "professional", "professional", "enterprise"],
-    "A002": ["starter", "starter", "starter", "growth", "growth", "growth"],
-    "A003": ["professional", "professional", "professional", "professional", "professional", "professional"],
-    "A004": ["growth", "growth", "starter", "starter", "starter", "starter"],
-    "A005": [None, None, "starter", "starter", "growth", "growth"],
-    "A006": ["growth", "growth", "growth", "growth", None, None],
-    "A007": ["enterprise", "enterprise", "enterprise", "enterprise", "professional", "professional"],
-    "A008": ["starter", "growth", "growth", "growth", "professional", "professional"],
+SERVICE_LINE_DEVICE_MAP = {
+    "Computer Repair": ["Notebook", "Desktop", "All In One", "Printer"],
+    "Mobile Repair": ["Smartphone", "Tablet"],
+    "B2B Support": ["Notebook", "Printer", "POS Terminal", "Network Router"],
+    "Onsite Visit": ["Network Router", "POS Terminal", "Office Notebook"],
 }
 
-TECHNICIANS = ["Avery Cole", "Jordan Ellis", "Taylor Brooks", "Morgan Reed", "Cameron Shaw"]
-SUPPORT_TEAMS = ["Field Support", "Workshop", "Remote Support"]
-TICKET_CATEGORIES = ["Hardware Repair", "Software Issue", "Warranty", "Preventive Maintenance", "Network Setup"]
-CUSTOMER_SEGMENTS = ["SMB", "Mid-Market", "Enterprise"]
-CHANNELS = ["WhatsApp", "Email", "Phone", "Portal"]
+STATUS_VARIATIONS = {
+    "delivered": [" delivered ", "DELIVERED", "Delivered"],
+    "ready_for_pickup": ["ready for pickup", "READY FOR PICKUP", " Ready For Pickup "],
+    "in_repair": ["in repair", "IN REPAIR", " In Repair "],
+    "awaiting_part": ["awaiting part", "AWAITING PART", " Awaiting Part "],
+    "quote_rejected": ["quote rejected", "QUOTE REJECTED", " Quote Rejected "],
+    "cancelled": ["cancelled", "CANCELLED", " Cancelled "],
+}
+
+SERVICE_LINE_VARIATIONS = {
+    "Computer Repair": [" computer repair ", "COMPUTER REPAIR", "Computer Repair"],
+    "Mobile Repair": ["mobile repair", "MOBILE REPAIR", " Mobile Repair "],
+    "B2B Support": ["b2b support", "B2B SUPPORT", " B2B Support "],
+    "Onsite Visit": ["onsite visit", "ONSITE VISIT", " Onsite Visit "],
+}
 
 FIRST_NAMES = [
     "Alex",
@@ -105,19 +163,6 @@ LAST_NAMES = [
     "Turner",
 ]
 
-MEMBER_PROFILE_SEQUENCE = [
-    "highly_engaged",
-    "highly_engaged",
-    "consistent",
-    "consistent",
-    "consistent",
-    "slipping",
-    "slipping",
-    "inactive",
-    "reactivated",
-    "never_activated",
-]
-
 
 def write_csv(file_path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
     file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -136,347 +181,503 @@ def normalize_text_for_email(value: str) -> str:
     return value.lower().replace(" ", ".")
 
 
-def build_members(rng: random.Random) -> list[dict[str, object]]:
-    members: list[dict[str, object]] = []
-    member_count = 50
-    signup_start = date(2025, 1, 10)
-    signup_end = date(2026, 3, 5)
-
-    for member_number in range(1, member_count + 1):
-        first_name = FIRST_NAMES[(member_number - 1) % len(FIRST_NAMES)]
-        last_name = LAST_NAMES[(member_number * 2 - 1) % len(LAST_NAMES)]
-        member_id = f"M{member_number:03d}"
-        full_name = f"{first_name} {last_name}"
-        partner = PARTNERS[(member_number - 1) % len(PARTNERS)]
-        activity_profile = MEMBER_PROFILE_SEQUENCE[(member_number - 1) % len(MEMBER_PROFILE_SEQUENCE)]
-
-        if activity_profile == "never_activated":
-            membership_status = "active"
-        elif activity_profile == "inactive" and member_number % 2 == 0:
-            membership_status = "paused"
-        elif member_number in {17, 34, 49}:
-            membership_status = "cancelled"
-        else:
-            membership_status = "active"
-
-        plan_name = (
-            "Corporate"
-            if member_number % 11 == 0
-            else "Premium Plus"
-            if member_number % 5 == 0
-            else "Premium"
-            if member_number % 3 == 0
-            else "Basic"
-        )
-
-        signup_date = random_date_between(rng, signup_start, signup_end)
-        email = f"{normalize_text_for_email(full_name)}.{member_id.lower()}@example.com"
-
-        members.append(
-            {
-                "member_id": member_id,
-                "full_name": full_name,
-                "email": email,
-                "partner_id": partner["partner_id"],
-                "partner_name": partner["partner_name"],
-                "signup_date": signup_date,
-                "membership_status": membership_status,
-                "plan_name": plan_name,
-                "monthly_fee": PLAN_PRICES[plan_name],
-                "activity_profile": activity_profile,
-            }
-        )
-
-    return members
+def company_lookup() -> dict[str, dict[str, object]]:
+    return {company["company_id"]: company for company in COMPANIES}
 
 
-def build_dim_member_rows(members: list[dict[str, object]]) -> list[dict[str, object]]:
-    return [
-        {
-            "member_id": member["member_id"],
-            "full_name": member["full_name"],
-            "email": member["email"],
-            "partner_id": member["partner_id"],
-            "signup_date": member["signup_date"].isoformat(),
-            "membership_status": member["membership_status"],
-        }
-        for member in members
-    ]
+def choose_service_line(account_type: str, order_number: int) -> str:
+    if account_type == "Retail":
+        return "Mobile Repair" if order_number % 3 == 0 else "Computer Repair"
+
+    sequence = ["B2B Support", "Computer Repair", "Onsite Visit", "B2B Support"]
+    return sequence[order_number % len(sequence)]
 
 
-def build_fact_membership_rows(rng: random.Random, members: list[dict[str, object]]) -> list[dict[str, object]]:
+def choose_device_type(service_line: str, order_number: int) -> str:
+    device_options = SERVICE_LINE_DEVICE_MAP[service_line]
+    return device_options[order_number % len(device_options)]
+
+
+def choose_priority(service_line: str, order_number: int) -> str:
+    if service_line == "Onsite Visit":
+        return "high"
+    if service_line == "B2B Support":
+        return "high" if order_number % 4 == 0 else "medium"
+    if service_line == "Mobile Repair":
+        return "medium"
+    return "medium" if order_number % 5 else "low"
+
+
+def choose_service_mode(service_line: str, order_number: int) -> str:
+    if service_line == "Onsite Visit":
+        return "onsite"
+    if service_line == "B2B Support":
+        return "pickup" if order_number % 2 == 0 else "onsite"
+    return "in_store"
+
+
+def choose_final_status(order_number: int) -> str:
+    if order_number % 15 == 0:
+        return "quote_rejected"
+    if order_number % 13 == 0:
+        return "cancelled"
+    if order_number % 11 == 0:
+        return "awaiting_part"
+    if order_number % 9 == 0:
+        return "ready_for_pickup"
+    if order_number % 7 == 0:
+        return "in_repair"
+    return "delivered"
+
+
+def determine_amounts(service_line: str, device_type: str, order_number: int, status: str) -> tuple[float, float]:
+    base_amount = {
+        "Computer Repair": 420.0,
+        "Mobile Repair": 360.0,
+        "B2B Support": 920.0,
+        "Onsite Visit": 690.0,
+    }[service_line]
+    device_modifier = {
+        "Notebook": 120.0,
+        "Desktop": 70.0,
+        "All In One": 90.0,
+        "Printer": 110.0,
+        "Smartphone": 80.0,
+        "Tablet": 40.0,
+        "POS Terminal": 180.0,
+        "Network Router": 140.0,
+        "Office Notebook": 150.0,
+    }.get(device_type, 0.0)
+
+    quoted_amount = base_amount + device_modifier + (order_number % 6) * 35
+    approved_revenue = quoted_amount
+
+    if status in {"quote_rejected", "cancelled"}:
+        approved_revenue = 0.0
+    elif status in {"awaiting_part", "in_repair", "ready_for_pickup"}:
+        approved_revenue = quoted_amount - (20 + (order_number % 3) * 10)
+    else:
+        approved_revenue = quoted_amount - (order_number % 4) * 15
+
+    return round(quoted_amount, 2), round(approved_revenue, 2)
+
+
+def build_dim_customer_rows(rng: random.Random) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
+    weighted_company_ids = (
+        ["CO001"] * 18
+        + ["CO002"] * 6
+        + ["CO003"] * 6
+        + ["CO004"] * 6
+        + ["CO005"] * 6
+        + ["CO006"] * 6
+    )
+    companies_by_id = company_lookup()
 
-    for member in members:
-        membership_end_date = ""
-        if member["membership_status"] == "cancelled":
-            membership_end_date = (
-                REFERENCE_DATE - timedelta(days=rng.randint(10, 65))
-            ).isoformat()
+    for customer_number, company_id in enumerate(weighted_company_ids, start=1):
+        company = companies_by_id[company_id]
+        first_name = FIRST_NAMES[(customer_number - 1) % len(FIRST_NAMES)]
+        last_name = LAST_NAMES[(customer_number * 2 - 1) % len(LAST_NAMES)]
+        phone_number = f"+55 65 9{rng.randint(1000, 9999)}-{rng.randint(1000, 9999)}"
 
         rows.append(
             {
-                "member_id": member["member_id"],
-                "plan_name": member["plan_name"],
-                "monthly_fee": f"{member['monthly_fee']:.2f}",
-                "membership_start_date": member["signup_date"].isoformat(),
-                "membership_end_date": membership_end_date,
+                "customer_id": f"CUST{customer_number:03d}",
+                "company_id": company_id,
+                "customer_name": f"{first_name} {last_name}",
+                "phone_number": phone_number,
+                "city": company["city"],
+                "customer_type": company["account_type"],
             }
         )
 
     return rows
 
 
-def build_checkin_offsets(profile: str, rng: random.Random) -> list[int]:
-    if profile == "highly_engaged":
-        recent_offsets = rng.sample(range(1, 28), 9)
-        older_offsets = rng.sample(range(28, 96), 12)
-        return sorted(set(recent_offsets + older_offsets))
-
-    if profile == "consistent":
-        recent_offsets = rng.sample(range(2, 32), 5)
-        older_offsets = rng.sample(range(32, 88), 8)
-        return sorted(set(recent_offsets + older_offsets))
-
-    if profile == "slipping":
-        return sorted(rng.sample(range(25, 92), 9))
-
-    if profile == "inactive":
-        return sorted(rng.sample(range(55, 125), 6))
-
-    if profile == "reactivated":
-        recent_offsets = [4, 11, 18]
-        older_offsets = rng.sample(range(76, 118), 5)
-        return sorted(set(recent_offsets + older_offsets))
-
-    return []
-
-
-def build_fact_checkin_rows(rng: random.Random, members: list[dict[str, object]]) -> list[dict[str, object]]:
-    rows: list[dict[str, object]] = []
-
-    for member in members:
-        signup_date: date = member["signup_date"]
-        checkin_offsets = build_checkin_offsets(str(member["activity_profile"]), rng)
-
-        for offset in checkin_offsets:
-            checkin_date = REFERENCE_DATE - timedelta(days=offset)
-            if checkin_date < signup_date:
-                continue
-
-            hour = 6 + (offset % 12)
-            minute = 15 if offset % 2 == 0 else 45
-            checkin_timestamp = datetime.combine(checkin_date, time(hour=hour, minute=minute))
-
-            rows.append(
-                {
-                    "member_id": member["member_id"],
-                    "checkin_timestamp": checkin_timestamp.isoformat(timespec="minutes"),
-                }
-            )
-
-    rows.sort(key=lambda row: (row["member_id"], row["checkin_timestamp"]))
-    return rows
-
-
-def build_fact_class_booking_rows(
-    rng: random.Random,
-    members: list[dict[str, object]],
-    fact_checkins: list[dict[str, object]],
+def build_fact_service_order_rows(
+    customers: list[dict[str, object]],
 ) -> list[dict[str, object]]:
-    latest_checkins_by_member: dict[str, list[str]] = {}
-    for row in fact_checkins:
-        latest_checkins_by_member.setdefault(str(row["member_id"]), []).append(str(row["checkin_timestamp"]))
-
     rows: list[dict[str, object]] = []
-    booking_counter = 1
+    companies_by_id = company_lookup()
+    priority_to_sla = {"low": 72, "medium": 48, "high": 24}
+    start_date = date(2026, 1, 5)
 
-    for member in members:
-        member_checkins = latest_checkins_by_member.get(str(member["member_id"]), [])
-        if not member_checkins:
-            continue
+    for order_number in range(1, 73):
+        customer = customers[(order_number * 7 + order_number // 4) % len(customers)]
+        company = companies_by_id[str(customer["company_id"])]
+        technician = TECHNICIANS[(order_number - 1) % len(TECHNICIANS)]
+        service_line = choose_service_line(str(company["account_type"]), order_number)
+        device_type = choose_device_type(service_line, order_number)
+        priority = choose_priority(service_line, order_number)
+        service_mode = choose_service_mode(service_line, order_number)
+        order_status = choose_final_status(order_number)
 
-        profile = str(member["activity_profile"])
-        limit = 6 if profile == "highly_engaged" else 4 if profile == "consistent" else 3
-
-        for timestamp_text in member_checkins[:limit]:
-            checkin_timestamp = datetime.fromisoformat(timestamp_text)
-            class_start_at = checkin_timestamp + timedelta(hours=2)
-
-            if profile == "highly_engaged":
-                booking_status = "completed" if booking_counter % 6 else "cancelled"
-            elif profile == "consistent":
-                booking_status = "completed" if booking_counter % 4 else "no_show"
-            elif profile == "reactivated":
-                booking_status = "completed" if booking_counter % 3 else "cancelled"
-            else:
-                booking_status = "completed" if booking_counter % 2 else "no_show"
-
-            rows.append(
-                {
-                    "booking_id": f"B{booking_counter:04d}",
-                    "member_id": member["member_id"],
-                    "class_start_at": class_start_at.isoformat(timespec="minutes"),
-                    "booking_status": booking_status,
-                }
-            )
-            booking_counter += 1
-
-    return rows
-
-
-def build_membership_export_raw_rows(
-    members: list[dict[str, object]],
-    fact_checkins: list[dict[str, object]],
-) -> list[dict[str, object]]:
-    last_checkin_by_member: dict[str, str] = {}
-    for row in fact_checkins:
-        last_checkin_by_member[str(row["member_id"])] = str(row["checkin_timestamp"]).split("T")[0]
-
-    raw_plan_values = {
-        "Basic": " basic plan ",
-        "Premium": "PREMIUM",
-        "Premium Plus": "premium plus",
-        "Corporate": "Corporate ",
-    }
-
-    rows: list[dict[str, object]] = []
-
-    for member in members:
-        membership_status = str(member["membership_status"]).upper() if member["member_id"] in {"M003", "M018"} else f" {member['membership_status']} "
-
-        rows.append(
-            {
-                " Member ID ": member["member_id"],
-                "Full Name": str(member["full_name"]).upper() if member["member_id"] == "M005" else member["full_name"],
-                "Email ": str(member["email"]).upper() if member["member_id"] == "M007" else member["email"],
-                "Signup Date": member["signup_date"].isoformat(),
-                "Last Checkin Date": last_checkin_by_member.get(str(member["member_id"]), ""),
-                "Membership Status": membership_status,
-                "Plan Name": raw_plan_values[str(member["plan_name"])],
-                "Monthly Fee": f"{member['monthly_fee']:.2f}",
-                "Partner Name": f" {member['partner_name']} ",
-            }
+        open_offset = min(order_number + (order_number % 6), 96)
+        opened_at = datetime.combine(
+            start_date + timedelta(days=open_offset),
+            time(hour=8 + (order_number % 8), minute=15 if order_number % 2 else 45),
         )
-
-    return rows
-
-
-def build_dim_account_rows() -> list[dict[str, object]]:
-    return [
-        {
-            "account_id": account_id,
-            "account_name": account_name,
-            "region": region,
-            "industry": industry,
-        }
-        for account_id, account_name, region, industry in SAAS_ACCOUNTS
-    ]
-
-
-def build_dim_plan_rows() -> list[dict[str, object]]:
-    return [
-        {"plan_id": "PLN001", "plan_name": "Starter", "plan_tier": "starter"},
-        {"plan_id": "PLN002", "plan_name": "Growth", "plan_tier": "growth"},
-        {"plan_id": "PLN003", "plan_name": "Professional", "plan_tier": "professional"},
-        {"plan_id": "PLN004", "plan_name": "Enterprise", "plan_tier": "enterprise"},
-    ]
-
-
-def build_fact_subscription_snapshot_rows() -> list[dict[str, object]]:
-    rows: list[dict[str, object]] = []
-    plan_id_by_tier = {
-        "starter": "PLN001",
-        "growth": "PLN002",
-        "professional": "PLN003",
-        "enterprise": "PLN004",
-    }
-    snapshot_months = [
-        date(2025, 11, 1),
-        date(2025, 12, 1),
-        date(2026, 1, 1),
-        date(2026, 2, 1),
-        date(2026, 3, 1),
-        date(2026, 4, 1),
-    ]
-
-    for account_id, *_ in SAAS_ACCOUNTS:
-        tier_sequence = SAAS_ACCOUNT_SEQUENCES[account_id]
-        last_known_tier = "starter"
-
-        for snapshot_date, tier in zip(snapshot_months, tier_sequence):
-            if tier is not None:
-                last_known_tier = tier
-
-            rows.append(
-                {
-                    "snapshot_date": snapshot_date.isoformat(),
-                    "account_id": account_id,
-                    "plan_id": plan_id_by_tier[last_known_tier],
-                    "mrr_amount": SAAS_PLAN_MRR[tier] if tier is not None else 0,
-                    "subscription_status": "active" if tier is not None else "cancelled",
-                }
-            )
-
-    return rows
-
-
-def build_it_service_ticket_rows(rng: random.Random) -> list[dict[str, object]]:
-    rows: list[dict[str, object]] = []
-    start_date = date(2026, 1, 3)
-    end_date = REFERENCE_DATE
-
-    for ticket_number in range(1, 61):
-        opened_date = random_date_between(rng, start_date, end_date)
-        opened_at = datetime.combine(opened_date, time(hour=8 + ticket_number % 8, minute=15))
-
-        priority = ["low", "medium", "high", "critical"][ticket_number % 4]
-        sla_target_hours = {
-            "low": 72,
-            "medium": 48,
-            "high": 24,
-            "critical": 8,
+        first_response_hours = {
+            "low": 8 + (order_number % 8),
+            "medium": 3 + (order_number % 9),
+            "high": 1 + (order_number % 6),
         }[priority]
-
-        first_response_hours = max(1, (ticket_number * 3) % 14)
         first_response_at = opened_at + timedelta(hours=first_response_hours)
+        quoted_at = first_response_at + timedelta(hours=6 + (order_number % 10))
 
-        is_open_ticket = ticket_number % 5 == 0
-        if is_open_ticket:
-            resolved_at = ""
-            status = ["open", "in_progress", "pending_customer"][ticket_number % 3]
-            resolution_hours = ""
-            breached_sla = "true" if (REFERENCE_DATE - opened_date).days * 24 > sla_target_hours else "false"
-        else:
-            resolution_delay = {
-                "low": 18 + ticket_number % 60,
-                "medium": 10 + ticket_number % 42,
-                "high": 6 + ticket_number % 24,
-                "critical": 2 + ticket_number % 12,
-            }[priority]
-            resolved_timestamp = opened_at + timedelta(hours=resolution_delay)
-            resolved_at = resolved_timestamp.isoformat(timespec="minutes")
-            status = "resolved"
-            resolution_hours = resolution_delay
-            breached_sla = "true" if resolution_delay > sla_target_hours else "false"
+        approved_at = None
+        closed_at = None
+        if order_status not in {"quote_rejected", "cancelled"}:
+            approved_at = quoted_at + timedelta(hours=8 + (order_number % 20))
+            if order_status == "delivered":
+                closed_at = approved_at + timedelta(hours=18 + (order_number % 80))
+
+        quoted_amount, approved_revenue = determine_amounts(
+            service_line,
+            device_type,
+            order_number,
+            order_status,
+        )
 
         rows.append(
             {
-                "ticket_id": f"T{ticket_number:04d}",
+                "order_id": f"SO{order_number:04d}",
+                "customer_id": customer["customer_id"],
+                "company_id": company["company_id"],
+                "technician_id": technician["technician_id"],
+                "service_line": service_line,
+                "device_type": device_type,
+                "service_mode": service_mode,
                 "opened_at": opened_at.isoformat(timespec="minutes"),
                 "first_response_at": first_response_at.isoformat(timespec="minutes"),
-                "resolved_at": resolved_at,
+                "quoted_at": quoted_at.isoformat(timespec="minutes"),
+                "approved_at": approved_at.isoformat(timespec="minutes") if approved_at else "",
+                "closed_at": closed_at.isoformat(timespec="minutes") if closed_at else "",
+                "order_status": order_status,
+                "quoted_amount": quoted_amount,
+                "approved_revenue": approved_revenue,
                 "priority": priority,
-                "status": status,
-                "channel": CHANNELS[ticket_number % len(CHANNELS)],
-                "support_team": SUPPORT_TEAMS[ticket_number % len(SUPPORT_TEAMS)],
-                "technician_name": TECHNICIANS[ticket_number % len(TECHNICIANS)],
-                "customer_segment": CUSTOMER_SEGMENTS[ticket_number % len(CUSTOMER_SEGMENTS)],
-                "category": TICKET_CATEGORIES[ticket_number % len(TICKET_CATEGORIES)],
-                "sla_target_hours": sla_target_hours,
-                "first_response_hours": first_response_hours,
-                "resolution_hours": resolution_hours,
-                "breached_sla": breached_sla,
+                "sla_target_hours": priority_to_sla[priority],
+            }
+        )
+
+    return rows
+
+
+def build_fact_order_status_history_rows(
+    service_orders: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    status_counter = 1
+
+    for order in service_orders:
+        order_id = str(order["order_id"])
+        opened_at = datetime.fromisoformat(str(order["opened_at"]))
+        first_response_at = datetime.fromisoformat(str(order["first_response_at"]))
+        quoted_at = datetime.fromisoformat(str(order["quoted_at"]))
+        approved_at = datetime.fromisoformat(str(order["approved_at"])) if order["approved_at"] else None
+        closed_at = datetime.fromisoformat(str(order["closed_at"])) if order["closed_at"] else None
+        order_status = str(order["order_status"])
+        order_number = int(order_id.replace("SO", ""))
+
+        timeline: list[tuple[str, datetime]] = [
+            ("created", opened_at),
+            ("diagnosis_started", first_response_at),
+            ("quote_sent", quoted_at),
+        ]
+
+        if order_status == "quote_rejected":
+            timeline.append(("quote_rejected", quoted_at + timedelta(hours=24 + order_number % 12)))
+        elif order_status == "cancelled":
+            timeline.append(("cancelled", quoted_at + timedelta(hours=18 + order_number % 10)))
+        elif approved_at:
+            timeline.append(("approved", approved_at))
+            if order_status == "awaiting_part":
+                timeline.append(("awaiting_part", approved_at + timedelta(hours=8 + order_number % 6)))
+            elif order_status == "in_repair":
+                timeline.append(("in_repair", approved_at + timedelta(hours=6 + order_number % 5)))
+            elif order_status == "ready_for_pickup":
+                repair_started = approved_at + timedelta(hours=6 + order_number % 5)
+                ready_at = repair_started + timedelta(hours=20 + order_number % 18)
+                timeline.extend(
+                    [
+                        ("in_repair", repair_started),
+                        ("quality_check", ready_at - timedelta(hours=4)),
+                        ("ready_for_pickup", ready_at),
+                    ]
+                )
+            elif order_status == "delivered" and closed_at:
+                repair_started = approved_at + timedelta(hours=6 + order_number % 5)
+                ready_at = closed_at - timedelta(hours=6 + order_number % 4)
+                quality_check_at = ready_at - timedelta(hours=4)
+                timeline.extend(
+                    [
+                        ("in_repair", repair_started),
+                        ("quality_check", quality_check_at),
+                        ("ready_for_pickup", ready_at),
+                        ("delivered", closed_at),
+                    ]
+                )
+
+        timeline.sort(key=lambda item: item[1])
+
+        for status_name, status_at in timeline:
+            rows.append(
+                {
+                    "status_id": f"ST{status_counter:05d}",
+                    "order_id": order_id,
+                    "status_name": status_name,
+                    "status_at": status_at.isoformat(timespec="minutes"),
+                }
+            )
+            status_counter += 1
+
+    return rows
+
+
+def build_fact_cost_entry_rows(
+    service_orders: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    cost_counter = 1
+
+    for order in service_orders:
+        order_id = str(order["order_id"])
+        company_id = str(order["company_id"])
+        approved_revenue = float(order["approved_revenue"])
+        quoted_at = datetime.fromisoformat(str(order["quoted_at"]))
+        approved_at = datetime.fromisoformat(str(order["approved_at"])) if order["approved_at"] else quoted_at
+        order_number = int(order_id.replace("SO", ""))
+
+        if approved_revenue > 0:
+            if order_number % 10 == 0:
+                total_ratio = 0.96
+            elif order_number % 7 == 0:
+                total_ratio = 0.78
+            elif order_number % 4 == 0:
+                total_ratio = 0.60
+            else:
+                total_ratio = 0.46
+
+            total_cost = round(approved_revenue * total_ratio, 2)
+            labor_cost = round(total_cost * 0.36, 2)
+            parts_cost = round(total_cost * 0.44, 2)
+            logistics_cost = round(total_cost - labor_cost - parts_cost, 2)
+
+            for category, amount, offset_hours in [
+                ("labor", labor_cost, 4),
+                ("parts", parts_cost, 10),
+                ("logistics", logistics_cost, 18),
+            ]:
+                if amount <= 0:
+                    continue
+
+                rows.append(
+                    {
+                        "cost_id": f"COST{cost_counter:05d}",
+                        "order_id": order_id,
+                        "company_id": company_id,
+                        "cost_category": category,
+                        "cost_amount": amount,
+                        "linked_status": "linked",
+                        "recorded_at": (approved_at + timedelta(hours=offset_hours)).isoformat(timespec="minutes"),
+                    }
+                )
+                cost_counter += 1
+
+            if order_number % 12 == 0:
+                rows.append(
+                    {
+                        "cost_id": f"COST{cost_counter:05d}",
+                        "order_id": order_id,
+                        "company_id": company_id,
+                        "cost_category": "external_service",
+                        "cost_amount": round(approved_revenue * 0.08, 2),
+                        "linked_status": "linked",
+                        "recorded_at": (approved_at + timedelta(hours=22)).isoformat(timespec="minutes"),
+                    }
+                )
+                cost_counter += 1
+
+        if order_number % 8 == 0:
+            rows.append(
+                {
+                    "cost_id": f"COST{cost_counter:05d}",
+                    "order_id": "",
+                    "company_id": company_id,
+                    "cost_category": "unlinked_purchase",
+                    "cost_amount": round(55 + order_number * 4.5, 2),
+                    "linked_status": "unlinked",
+                    "recorded_at": (quoted_at + timedelta(days=1)).isoformat(timespec="minutes"),
+                }
+            )
+            cost_counter += 1
+
+    return rows
+
+
+def build_fact_customer_contact_rows(
+    customers: list[dict[str, object]],
+    service_orders: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    contact_counter = 1
+    orders_by_customer: dict[str, list[dict[str, object]]] = {}
+
+    for order in service_orders:
+        orders_by_customer.setdefault(str(order["customer_id"]), []).append(order)
+
+    customers_by_id = {customer["customer_id"]: customer for customer in customers}
+
+    for customer_id, customer_orders in orders_by_customer.items():
+        customer_orders.sort(key=lambda item: str(item["opened_at"]))
+        customer = customers_by_id[customer_id]
+
+        delivered_orders = [order for order in customer_orders if order["closed_at"]]
+        for delivered_order in delivered_orders[:2]:
+            if int(str(delivered_order["order_id"]).replace("SO", "")) % 2 == 0:
+                rows.append(
+                    {
+                        "contact_id": f"CONT{contact_counter:05d}",
+                        "customer_id": customer_id,
+                        "company_id": delivered_order["company_id"],
+                        "contact_type": "satisfaction_check",
+                        "contact_channel": "WhatsApp",
+                        "contact_at": (
+                            datetime.fromisoformat(str(delivered_order["closed_at"])) + timedelta(days=5)
+                        ).isoformat(timespec="minutes"),
+                        "contact_outcome": "reached",
+                    }
+                )
+                contact_counter += 1
+
+        rejected_orders = [
+            order for order in customer_orders if str(order["order_status"]) == "quote_rejected"
+        ]
+        for rejected_order in rejected_orders[:1]:
+            rows.append(
+                {
+                    "contact_id": f"CONT{contact_counter:05d}",
+                    "customer_id": customer_id,
+                    "company_id": rejected_order["company_id"],
+                    "contact_type": "quote_follow_up",
+                    "contact_channel": "Phone",
+                    "contact_at": (
+                        datetime.fromisoformat(str(rejected_order["quoted_at"])) + timedelta(days=2)
+                    ).isoformat(timespec="minutes"),
+                    "contact_outcome": "no_response",
+                }
+            )
+            contact_counter += 1
+
+        if delivered_orders:
+            last_delivered = max(
+                datetime.fromisoformat(str(order["closed_at"])) for order in delivered_orders
+            )
+            customer_number = int(customer_id.replace("CUST", ""))
+
+            if (REFERENCE_DATE - last_delivered.date()).days >= 45 and customer_number % 3 == 0:
+                rows.append(
+                    {
+                        "contact_id": f"CONT{contact_counter:05d}",
+                        "customer_id": customer_id,
+                        "company_id": customer["company_id"],
+                        "contact_type": "recall_campaign",
+                        "contact_channel": "WhatsApp",
+                        "contact_at": datetime.combine(
+                            REFERENCE_DATE - timedelta(days=10 + customer_number % 11),
+                            time(hour=10, minute=0),
+                        ).isoformat(timespec="minutes"),
+                        "contact_outcome": "scheduled_visit" if customer_number % 6 == 0 else "no_response",
+                    }
+                )
+                contact_counter += 1
+
+            if customer["customer_type"] == "B2B" and customer_number % 4 == 0:
+                rows.append(
+                    {
+                        "contact_id": f"CONT{contact_counter:05d}",
+                        "customer_id": customer_id,
+                        "company_id": customer["company_id"],
+                        "contact_type": "b2b_account_review",
+                        "contact_channel": "Email",
+                        "contact_at": datetime.combine(
+                            REFERENCE_DATE - timedelta(days=14 + customer_number % 9),
+                            time(hour=14, minute=30),
+                        ).isoformat(timespec="minutes"),
+                        "contact_outcome": "reached",
+                    }
+                )
+                contact_counter += 1
+
+    return rows
+
+
+def build_service_orders_raw_rows(
+    customers: list[dict[str, object]],
+    service_orders: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    customers_by_id = {customer["customer_id"]: customer for customer in customers}
+    companies_by_id = company_lookup()
+    technicians_by_id = {technician["technician_id"]: technician for technician in TECHNICIANS}
+
+    for order in service_orders:
+        order_number = int(str(order["order_id"]).replace("SO", ""))
+        customer = customers_by_id[str(order["customer_id"])]
+        company = companies_by_id[str(order["company_id"])]
+        technician = technicians_by_id[str(order["technician_id"])]
+        service_line = str(order["service_line"])
+        current_status = str(order["order_status"])
+
+        rows.append(
+            {
+                " Order ID ": order["order_id"],
+                "Customer Name": (
+                    str(customer["customer_name"]).upper()
+                    if order_number % 10 == 0
+                    else customer["customer_name"]
+                ),
+                "Phone Number ": (
+                    str(customer["phone_number"]).replace("+55 ", "")
+                    if order_number % 6 == 0
+                    else customer["phone_number"]
+                ),
+                "Company Name": (
+                    str(company["company_name"]).upper()
+                    if order_number % 9 == 0
+                    else f" {company['company_name']} "
+                ),
+                "Service Line": SERVICE_LINE_VARIATIONS[service_line][order_number % 3],
+                "Device Type": (
+                    str(order["device_type"]).lower()
+                    if order_number % 5 == 0
+                    else order["device_type"]
+                ),
+                " Current Status ": STATUS_VARIATIONS[current_status][order_number % 3],
+                "Opened At": order["opened_at"],
+                "Closed At": order["closed_at"],
+                "Quoted Amount (BRL)": (
+                    f"R$ {order['quoted_amount']:,.2f}"
+                    if order_number % 4 == 0
+                    else f" {order['quoted_amount']:.2f} "
+                ),
+                "Approved Revenue (BRL)": (
+                    f"R$ {order['approved_revenue']:,.2f}"
+                    if order_number % 3 == 0
+                    else f" {order['approved_revenue']:.2f} "
+                ),
+                "Technician Name": (
+                    str(technician["technician_name"]).upper()
+                    if order_number % 8 == 0
+                    else f" {technician['technician_name']} "
+                ),
+                "City": (
+                    str(customer["city"]).upper()
+                    if order_number % 7 == 0
+                    else f" {customer['city']} "
+                ),
+                "SLA Target Hours": f" {order['sla_target_hours']} ",
             }
         )
 
@@ -487,87 +688,83 @@ def main() -> None:
     rng = random.Random(SEED)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    members = build_members(rng)
-    fact_checkins = build_fact_checkin_rows(rng, members)
+    customers = build_dim_customer_rows(rng)
+    service_orders = build_fact_service_order_rows(customers)
 
     write_csv(
-        OUTPUT_DIR / "dim_partner.csv",
-        ["partner_id", "partner_name", "region", "contract_status"],
-        PARTNERS,
+        OUTPUT_DIR / "dim_company.csv",
+        ["company_id", "company_name", "account_type", "city", "region", "contract_status"],
+        COMPANIES,
     )
     write_csv(
-        OUTPUT_DIR / "dim_member.csv",
-        ["member_id", "full_name", "email", "partner_id", "signup_date", "membership_status"],
-        build_dim_member_rows(members),
+        OUTPUT_DIR / "dim_customer.csv",
+        ["customer_id", "company_id", "customer_name", "phone_number", "city", "customer_type"],
+        customers,
     )
     write_csv(
-        OUTPUT_DIR / "fact_membership.csv",
-        ["member_id", "plan_name", "monthly_fee", "membership_start_date", "membership_end_date"],
-        build_fact_membership_rows(rng, members),
+        OUTPUT_DIR / "dim_technician.csv",
+        ["technician_id", "technician_name", "squad_name", "specialty"],
+        TECHNICIANS,
     )
     write_csv(
-        OUTPUT_DIR / "fact_checkin.csv",
-        ["member_id", "checkin_timestamp"],
-        fact_checkins,
-    )
-    write_csv(
-        OUTPUT_DIR / "fact_class_booking.csv",
-        ["booking_id", "member_id", "class_start_at", "booking_status"],
-        build_fact_class_booking_rows(rng, members, fact_checkins),
-    )
-    write_csv(
-        OUTPUT_DIR / "membership_export_raw.csv",
+        OUTPUT_DIR / "fact_service_order.csv",
         [
-            " Member ID ",
-            "Full Name",
-            "Email ",
-            "Signup Date",
-            "Last Checkin Date",
-            "Membership Status",
-            "Plan Name",
-            "Monthly Fee",
-            "Partner Name",
-        ],
-        build_membership_export_raw_rows(members, fact_checkins),
-    )
-    write_csv(
-        OUTPUT_DIR / "dim_account.csv",
-        ["account_id", "account_name", "region", "industry"],
-        build_dim_account_rows(),
-    )
-    write_csv(
-        OUTPUT_DIR / "dim_plan.csv",
-        ["plan_id", "plan_name", "plan_tier"],
-        build_dim_plan_rows(),
-    )
-    write_csv(
-        OUTPUT_DIR / "fact_subscription_snapshot.csv",
-        ["snapshot_date", "account_id", "plan_id", "mrr_amount", "subscription_status"],
-        build_fact_subscription_snapshot_rows(),
-    )
-    write_csv(
-        OUTPUT_DIR / "it_service_tickets.csv",
-        [
-            "ticket_id",
+            "order_id",
+            "customer_id",
+            "company_id",
+            "technician_id",
+            "service_line",
+            "device_type",
+            "service_mode",
             "opened_at",
             "first_response_at",
-            "resolved_at",
+            "quoted_at",
+            "approved_at",
+            "closed_at",
+            "order_status",
+            "quoted_amount",
+            "approved_revenue",
             "priority",
-            "status",
-            "channel",
-            "support_team",
-            "technician_name",
-            "customer_segment",
-            "category",
             "sla_target_hours",
-            "first_response_hours",
-            "resolution_hours",
-            "breached_sla",
         ],
-        build_it_service_ticket_rows(rng),
+        service_orders,
+    )
+    write_csv(
+        OUTPUT_DIR / "fact_order_status_history.csv",
+        ["status_id", "order_id", "status_name", "status_at"],
+        build_fact_order_status_history_rows(service_orders),
+    )
+    write_csv(
+        OUTPUT_DIR / "fact_cost_entry.csv",
+        ["cost_id", "order_id", "company_id", "cost_category", "cost_amount", "linked_status", "recorded_at"],
+        build_fact_cost_entry_rows(service_orders),
+    )
+    write_csv(
+        OUTPUT_DIR / "fact_customer_contact.csv",
+        ["contact_id", "customer_id", "company_id", "contact_type", "contact_channel", "contact_at", "contact_outcome"],
+        build_fact_customer_contact_rows(customers, service_orders),
+    )
+    write_csv(
+        OUTPUT_DIR / "service_orders_raw.csv",
+        [
+            " Order ID ",
+            "Customer Name",
+            "Phone Number ",
+            "Company Name",
+            "Service Line",
+            "Device Type",
+            " Current Status ",
+            "Opened At",
+            "Closed At",
+            "Quoted Amount (BRL)",
+            "Approved Revenue (BRL)",
+            "Technician Name",
+            "City",
+            "SLA Target Hours",
+        ],
+        build_service_orders_raw_rows(customers, service_orders),
     )
 
 
 if __name__ == "__main__":
     main()
-

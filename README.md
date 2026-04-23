@@ -4,7 +4,7 @@ Solving business problems through data, process intelligence, and decision-ready
 
 I am a data professional focused on turning operational complexity into clear business decisions. This public portfolio was designed to showcase how I approach SQL problem-solving, Python automation, data modeling, and dashboard design for international Data Analyst and Business Intelligence opportunities.
 
-All examples in this repository use synthetic scenarios and fictitious entities only. No sensitive, proprietary, or real company data is included.
+All examples in this repository use synthetic scenarios and fictitious entities only. The portfolio is centered on a fictitious analytical version of the Maker Info service operations system, with no sensitive, proprietary, or real company data included.
 
 ## Tech Stack
 
@@ -16,26 +16,26 @@ All examples in this repository use synthetic scenarios and fictitious entities 
 
 ## Featured Projects
 
-### 1. Gym Partner Engagement Analysis
+### 1. Maker Info Service Order Profitability Analysis
 
-Synthetic analytics case that simulates a fitness partnership program and answers questions such as:
+Synthetic analytics case focused on operational and financial visibility for a repair and support management system.
 
-- Which partner gyms drive the highest member engagement?
-- Where is churn risk increasing month over month?
-- Which behaviors signal reactivation potential?
+- Which service lines generate the best margin after linked and unlinked costs?
+- Which client accounts are leaking profitability due to stalled orders or unassigned expenses?
+- Which operational patterns should managers prioritize to protect cash flow?
 
 Technical highlights:
 
-- Star-schema thinking using member, partner, booking, and check-in entities
-- Advanced SQL with multi-step CTEs, joins, and window functions
-- KPI design for retention, engagement score, and partner performance ranking
+- Dimensional thinking around service orders, status history, costs, customers, and technicians
+- Advanced SQL with multi-step CTEs, joins, window functions, and profitability bridges
+- KPI design for margin, backlog aging, SLA attainment, quote recovery, and recall actions
 
-### 2. IT Service Efficiency Dashboard
+### 2. Maker Info Operational Dashboard and Recall Intelligence
 
-Synthetic BI case focused on operational support performance and decision support for service managers.
+Synthetic BI case built around the daily decision layer of the Maker Info system.
 
-- Tracks SLA compliance, backlog aging, first response time, and mean time to resolution
-- Organizes KPIs for executive overview, operational diagnosis, and team-level action
+- Tracks revenue, cost leakage, SLA compliance, backlog aging, quote approval, and recall opportunity
+- Organizes KPIs for executive overview, operational diagnosis, and daily team action
 - Applies UX principles for fast scanning, drill-down clarity, and trustworthy data storytelling
 
 ## Repository Structure
@@ -46,25 +46,23 @@ Data-Analytics-Portfolio-Showcase/
 |-- .gitignore
 |-- requirements.txt
 |-- SQL_Challenges/
-|   |-- 01_gym_partner_engagement_analysis.sql
-|   |-- 02_saas_subscription_health.sql
-|   `-- 03_member_lifecycle_reactivation.sql
+|   |-- 01_service_order_profitability_analysis.sql
+|   |-- 02_operational_sla_backlog_analysis.sql
+|   `-- 03_customer_recall_reactivation_analysis.sql
 |-- Python_Automation/
-|   |-- clean_membership_data.py
+|   |-- clean_service_orders_data.py
 |   `-- generate_synthetic_portfolio_data.py
 |-- Synthetic_Data/
 |   |-- README.md
-|   |-- dim_partner.csv
-|   |-- dim_member.csv
-|   |-- fact_membership.csv
-|   |-- fact_checkin.csv
-|   |-- fact_class_booking.csv
-|   |-- membership_export_raw.csv
-|   |-- membership_export_clean.csv
-|   |-- dim_account.csv
-|   |-- dim_plan.csv
-|   |-- fact_subscription_snapshot.csv
-|   `-- it_service_tickets.csv
+|   |-- dim_company.csv
+|   |-- dim_customer.csv
+|   |-- dim_technician.csv
+|   |-- fact_service_order.csv
+|   |-- fact_order_status_history.csv
+|   |-- fact_cost_entry.csv
+|   |-- fact_customer_contact.csv
+|   |-- service_orders_raw.csv
+|   `-- service_orders_clean.csv
 `-- Dashboards/
     |-- README.md
     `-- assets/
@@ -76,20 +74,20 @@ Data-Analytics-Portfolio-Showcase/
 
 This repository also includes a reproducible synthetic data pack so the portfolio can be explored without any dependency on real business data.
 
-- Gym engagement tables for SQL analysis and lifecycle segmentation
-- SaaS revenue snapshots for MRR, churn, and expansion analysis
-- Service ticket data for dashboard and operational KPI prototyping
-- A deliberately messy membership export for Python-based data cleaning
-- A cleaned membership export that demonstrates the output of the pandas workflow
+- Service order tables for profitability, SLA, backlog, and recall analysis
+- Operational cost and status history data for dashboard prototyping
+- Customer contact history for recall and commercial follow-up use cases
+- A deliberately messy service order export for Python-based data cleaning
+- A cleaned service order export that demonstrates the output of the pandas workflow
 
 ## Quick Start
 
 ```bash
 pip install -r requirements.txt
 python Python_Automation/generate_synthetic_portfolio_data.py
-python Python_Automation/clean_membership_data.py \
-  --input Synthetic_Data/membership_export_raw.csv \
-  --output Synthetic_Data/membership_export_clean.csv \
+python Python_Automation/clean_service_orders_data.py \
+  --input Synthetic_Data/service_orders_raw.csv \
+  --output Synthetic_Data/service_orders_clean.csv \
   --reference-date 2026-04-15
 ```
 

@@ -1,0 +1,73 @@
+ Order ID ,Customer Name,Phone Number ,Company Name,Service Line,Device Type, Current Status ,Opened At,Closed At,Quoted Amount (BRL),Approved Revenue (BRL),Technician Name,City,SLA Target Hours
+SO0001,Cameron Carter,+55 65 91112-6435, Retail Direct ,COMPUTER REPAIR,Desktop,DELIVERED,2026-01-07T09:15,2026-01-09T00:15, 525.00 , 510.00 , Avery Cole , Cuiaba , 48 
+SO0002,Blake Turner,+55 65 93874-4594, Retail Direct ,Computer Repair,All In One,Delivered,2026-01-09T10:45,2026-01-11T05:45, 580.00 , 550.00 , Jordan Ellis , Cuiaba , 48 
+SO0003,Jamie Morris,+55 65 99974-4803, Orion Legal Group ,b2b support,Network Router, delivered ,2026-01-11T11:15,2026-01-13T10:15, 1165.00 ,"R$ 1,120.00", Taylor Brooks , Cuiaba , 48 
+SO0004,Blake Turner,+55 65 95484-6767, Verde Health Clinic ,B2B SUPPORT,Notebook,DELIVERED,2026-01-13T12:45,2026-01-15T13:45,"R$ 1,180.00", 1180.00 , Morgan Reed , Cuiaba , 24 
+SO0005,Jamie Morris,+55 65 98629-8972, Prime Edu Center ,Computer Repair,desktop,Delivered,2026-01-15T13:15,2026-01-18T01:15, 665.00 , 650.00 , Cameron Shaw , Sinop , 72 
+SO0006,Skyler Jordan,65 92386-7081, Nova Realty Partners ,onsite visit,Network Router, delivered ,2026-01-11T14:45,2026-01-13T17:45, 830.00 ,R$ 800.00, Avery Cole , Rondonopolis , 24 
+SO0007,Taylor Price,+55 65 92762-7319, Retail Direct ,COMPUTER REPAIR,Printer,IN REPAIR,2026-01-13T15:15,, 565.00 , 535.00 , Jordan Ellis ,CUIABA, 48 
+SO0008,Parker Reed,+55 65 92843-2506, Retail Direct ,Computer Repair,Notebook,Delivered,2026-01-15T08:45,2026-01-18T03:45,R$ 610.00, 610.00 ,TAYLOR BROOKS, Cuiaba , 48 
+SO0009,Taylor Price,+55 65 95958-4595,RETAIL DIRECT,mobile repair,Tablet,ready for pickup,2026-01-17T09:15,, 505.00 ,R$ 485.00, Morgan Reed , Cuiaba , 48 
+SO0010,AVERY BROOKS,+55 65 99229-2483, Verde Health Clinic ,ONSITE VISIT,pos terminal,DELIVERED,2026-01-19T10:45,2026-01-21T19:45, 1010.00 , 980.00 , Cameron Shaw , Cuiaba , 24 
+SO0011,Jordan Perry,+55 65 96724-1912, Atlas Logistics Hub , B2B Support ,Network Router, Awaiting Part ,2026-01-21T11:15,, 1235.00 , 1195.00 , Avery Cole , Varzea Grande , 48 
+SO0012,Avery Brooks,65 97002-1493, Prime Edu Center ,b2b support,Notebook, delivered ,2026-01-17T12:45,2026-01-19T23:45,"R$ 1,040.00","R$ 1,040.00", Jordan Ellis , Sinop , 24 
+SO0013,Jordan Perry,+55 65 99137-7272, Nova Realty Partners ,COMPUTER REPAIR,Desktop,CANCELLED,2026-01-19T13:15,, 525.00 , 0.00 , Taylor Brooks , Rondonopolis , 48 
+SO0014,Riley Gray,+55 65 92172-9252, Retail Direct ,Computer Repair,All In One, In Repair ,2026-01-21T14:45,, 580.00 , 540.00 , Morgan Reed ,CUIABA, 48 
+SO0015,Harper Diaz,+55 65 94782-5555, Retail Direct ,mobile repair,tablet,quote rejected,2026-01-23T15:15,, 505.00 ,R$ 0.00, Cameron Shaw , Cuiaba , 48 
+SO0016,Riley Gray,+55 65 97686-1478, Orion Legal Group ,B2B SUPPORT,Notebook,DELIVERED,2026-01-25T08:45,2026-01-28T11:45,"R$ 1,180.00", 1180.00 ,AVERY COLE, Cuiaba , 24 
+SO0017,Harper Diaz,+55 65 96158-5617, Verde Health Clinic ,Computer Repair,Desktop,Delivered,2026-01-27T09:15,2026-01-30T21:15, 665.00 , 650.00 , Jordan Ellis , Cuiaba , 48 
+SO0018,Casey Parker,65 95098-6743,ATLAS LOGISTICS HUB,onsite visit,Network Router,ready for pickup,2026-01-23T10:45,, 830.00 ,R$ 810.00, Taylor Brooks , Varzea Grande , 24 
+SO0019,Logan Bennett,+55 65 92409-2173, Prime Edu Center ,B2B SUPPORT,Network Router,DELIVERED,2026-01-25T11:15,2026-01-28T22:15, 1095.00 , 1050.00 , Morgan Reed , Sinop , 48 
+SO0020,JORDAN PERRY,+55 65 92829-4712, Retail Direct ,Computer Repair,notebook,Delivered,2026-01-27T12:45,2026-01-30T04:45,R$ 610.00, 610.00 , Cameron Shaw , Cuiaba , 72 
+SO0021,Drew Hayes,+55 65 96759-6009, Retail Direct ,mobile repair,Tablet,in repair,2026-01-29T13:15,, 505.00 ,R$ 485.00, Avery Cole ,CUIABA, 48 
+SO0022,Alex Mason,+55 65 92137-2005, Retail Direct ,COMPUTER REPAIR,All In One,AWAITING PART,2026-01-31T14:45,, 650.00 , 620.00 , Jordan Ellis , Cuiaba , 48 
+SO0023,Cameron Carter,+55 65 93864-7907, Orion Legal Group , B2B Support ,Network Router,Delivered,2026-02-02T15:15,2026-02-05T12:15, 1235.00 , 1190.00 , Taylor Brooks , Cuiaba , 48 
+SO0024,Alex Mason,65 97964-6189, Atlas Logistics Hub ,b2b support,Notebook, delivered ,2026-01-29T08:45,2026-02-01T01:45,"R$ 1,040.00","R$ 1,040.00",MORGAN REED, Varzea Grande , 24 
+SO0025,Cameron Carter,+55 65 98377-3110, Prime Edu Center ,COMPUTER REPAIR,desktop,DELIVERED,2026-01-31T09:15,2026-02-03T13:15, 525.00 , 510.00 , Cameron Shaw , Sinop , 72 
+SO0026,Blake Turner,+55 65 94118-5713, Nova Realty Partners , Onsite Visit ,Office Notebook, Cancelled ,2026-02-02T10:45,, 910.00 , 0.00 , Avery Cole , Rondonopolis , 24 
+SO0027,Morgan Ward,+55 65 93925-4104,RETAIL DIRECT,mobile repair,Tablet,ready for pickup,2026-02-04T11:15,, 505.00 ,R$ 485.00, Jordan Ellis , Cuiaba , 48 
+SO0028,Logan Bennett,+55 65 96404-4307, Retail Direct ,COMPUTER REPAIR,Notebook,IN REPAIR,2026-02-06T12:45,,R$ 680.00, 650.00 , Taylor Brooks ,CUIABA, 48 
+SO0029,Morgan Ward,+55 65 94543-3936, Orion Legal Group ,Computer Repair,Desktop,Delivered,2026-02-08T13:15,2026-02-12T01:15, 665.00 , 650.00 , Morgan Reed , Cuiaba , 48 
+SO0030,PARKER REED,65 95902-7731, Verde Health Clinic ,onsite visit,network router,quote rejected,2026-02-04T14:45,, 830.00 ,R$ 0.00, Cameron Shaw , Cuiaba , 24 
+SO0031,Taylor Price,+55 65 95081-5179, Atlas Logistics Hub ,B2B SUPPORT,Network Router,DELIVERED,2026-02-06T15:15,2026-02-10T01:15, 1095.00 , 1050.00 , Avery Cole , Varzea Grande , 48 
+SO0032,Parker Reed,+55 65 95491-6956, Prime Edu Center , B2B Support ,Notebook,Delivered,2026-02-08T08:45,2026-02-11T17:45,"R$ 1,110.00", 1110.00 ,JORDAN ELLIS, Sinop , 24 
+SO0033,Taylor Price,+55 65 92017-5855, Nova Realty Partners , computer repair ,Desktop,awaiting part,2026-02-10T09:15,, 595.00 ,R$ 575.00, Taylor Brooks , Rondonopolis , 48 
+SO0034,Jamie Morris,+55 65 91385-3076, Retail Direct ,COMPUTER REPAIR,All In One,DELIVERED,2026-02-12T10:45,2026-02-16T08:45, 650.00 , 620.00 , Morgan Reed , Cuiaba , 48 
+SO0035,Skyler Jordan,+55 65 99963-6544, Retail Direct ,Computer Repair,printer, In Repair ,2026-02-14T11:15,, 705.00 , 665.00 , Cameron Shaw ,CUIABA, 72 
+SO0036,Jamie Morris,65 99974-4803,ORION LEGAL GROUP,b2b support,Notebook,ready for pickup,2026-02-10T12:45,,"R$ 1,040.00","R$ 1,020.00", Avery Cole , Cuiaba , 24 
+SO0037,Skyler Jordan,+55 65 97727-8872, Verde Health Clinic ,COMPUTER REPAIR,Desktop,DELIVERED,2026-02-12T13:15,2026-02-16T14:15, 525.00 , 510.00 , Jordan Ellis , Cuiaba , 48 
+SO0038,Riley Gray,+55 65 98909-3446, Atlas Logistics Hub , Onsite Visit ,Office Notebook,Delivered,2026-02-14T14:45,2026-02-18T17:45, 910.00 , 880.00 , Taylor Brooks , Varzea Grande , 24 
+SO0039,Harper Diaz,+55 65 94095-9517, Nova Realty Partners ,b2b support,Network Router,cancelled,2026-02-16T15:15,, 1165.00 ,R$ 0.00, Morgan Reed , Rondonopolis , 48 
+SO0040,TAYLOR PRICE,+55 65 92762-7319, Retail Direct ,COMPUTER REPAIR,notebook,DELIVERED,2026-02-18T08:45,2026-02-21T16:45,R$ 680.00, 680.00 ,CAMERON SHAW, Cuiaba , 72 
+SO0041,Avery Brooks,+55 65 96924-7059, Retail Direct ,Computer Repair,Desktop,Delivered,2026-02-20T09:15,2026-02-23T20:15, 665.00 , 650.00 , Avery Cole , Cuiaba , 48 
+SO0042,Jordan Perry,65 98653-2908, Retail Direct ,mobile repair,Smartphone,in repair,2026-02-16T10:45,, 440.00 ,R$ 420.00, Jordan Ellis ,CUIABA, 48 
+SO0043,Drew Hayes,+55 65 94637-6626, Orion Legal Group ,B2B SUPPORT,Network Router,DELIVERED,2026-02-18T11:15,2026-02-22T06:15, 1095.00 , 1050.00 , Taylor Brooks , Cuiaba , 48 
+SO0044,Jordan Perry,+55 65 96724-1912, Atlas Logistics Hub , B2B Support ,Notebook, Awaiting Part ,2026-02-20T12:45,,"R$ 1,110.00", 1070.00 , Morgan Reed , Varzea Grande , 24 
+SO0045,Drew Hayes,+55 65 91031-3088,PRIME EDU CENTER, computer repair ,desktop,quote rejected,2026-02-22T13:15,, 595.00 ,R$ 0.00, Cameron Shaw , Sinop , 72 
+SO0046,Alex Mason,+55 65 92482-5345, Nova Realty Partners ,ONSITE VISIT,POS Terminal,DELIVERED,2026-02-24T14:45,2026-02-28T13:45, 1010.00 , 980.00 , Avery Cole , Rondonopolis , 24 
+SO0047,Casey Parker,+55 65 93748-5617, Retail Direct ,Computer Repair,Printer,Delivered,2026-02-26T15:15,2026-03-02T17:15, 705.00 , 660.00 , Jordan Ellis , Cuiaba , 48 
+SO0048,Harper Diaz,65 94782-5555, Retail Direct ,mobile repair,Smartphone, delivered ,2026-02-22T08:45,2026-02-26T14:45,R$ 440.00,R$ 440.00,TAYLOR BROOKS, Cuiaba , 48 
+SO0049,Casey Parker,+55 65 91715-2753, Orion Legal Group ,COMPUTER REPAIR,Desktop,IN REPAIR,2026-02-24T09:15,, 525.00 , 495.00 , Morgan Reed ,CUIABA, 48 
+SO0050,LOGAN BENNETT,+55 65 97888-3543, Verde Health Clinic , Onsite Visit ,office notebook,Delivered,2026-02-26T10:45,2026-03-02T09:45, 910.00 , 880.00 , Cameron Shaw , Cuiaba , 24 
+SO0051,Morgan Ward,+55 65 97155-7534, Atlas Logistics Hub ,b2b support,Network Router, delivered ,2026-02-28T11:15,2026-03-04T19:15, 1165.00 ,"R$ 1,120.00", Avery Cole , Varzea Grande , 48 
+SO0052,Logan Bennett,+55 65 92409-2173, Prime Edu Center ,B2B SUPPORT,Notebook,CANCELLED,2026-03-02T12:45,,"R$ 1,180.00", 0.00 , Jordan Ellis , Sinop , 24 
+SO0053,Alex Mason,+55 65 97093-2345, Retail Direct ,Computer Repair,Desktop,Delivered,2026-03-04T13:15,2026-03-09T05:15, 665.00 , 650.00 , Taylor Brooks , Cuiaba , 48 
+SO0054,Cameron Carter,65 91112-6435,RETAIL DIRECT,mobile repair,Smartphone,ready for pickup,2026-02-28T14:45,, 440.00 ,R$ 420.00, Morgan Reed , Cuiaba , 48 
+SO0055,Blake Turner,+55 65 93874-4594, Retail Direct ,COMPUTER REPAIR,printer,AWAITING PART,2026-03-02T15:15,, 565.00 , 535.00 , Cameron Shaw , Cuiaba , 72 
+SO0056,Cameron Carter,+55 65 93864-7907, Orion Legal Group , B2B Support ,Notebook, In Repair ,2026-03-04T08:45,,"R$ 1,110.00", 1070.00 ,AVERY COLE,CUIABA, 24 
+SO0057,Blake Turner,+55 65 95484-6767, Verde Health Clinic , computer repair ,Desktop, delivered ,2026-03-06T09:15,2026-03-11T08:15, 595.00 ,R$ 580.00, Jordan Ellis , Cuiaba , 48 
+SO0058,Jamie Morris,+55 65 98629-8972, Prime Edu Center ,ONSITE VISIT,POS Terminal,DELIVERED,2026-03-08T10:45,2026-03-13T11:45, 1010.00 , 980.00 , Taylor Brooks , Sinop , 24 
+SO0059,Skyler Jordan,+55 65 92386-7081, Nova Realty Partners , B2B Support ,Network Router,Delivered,2026-03-10T11:15,2026-03-15T18:15, 1235.00 , 1190.00 , Morgan Reed , Rondonopolis , 48 
+SO0060,MORGAN WARD,65 93925-4104, Retail Direct ,mobile repair,smartphone,quote rejected,2026-03-06T12:45,,R$ 440.00,R$ 0.00, Cameron Shaw , Cuiaba , 48 
+SO0061,Parker Reed,+55 65 92843-2506, Retail Direct ,COMPUTER REPAIR,Desktop,DELIVERED,2026-03-08T13:15,2026-03-12T22:15, 525.00 , 510.00 , Avery Cole , Cuiaba , 48 
+SO0062,Taylor Price,+55 65 95958-4595, Retail Direct ,Computer Repair,All In One,Delivered,2026-03-10T14:45,2026-03-15T03:45, 580.00 , 550.00 , Jordan Ellis , Cuiaba , 48 
+SO0063,Avery Brooks,+55 65 99229-2483,VERDE HEALTH CLINIC,b2b support,Network Router,ready for pickup,2026-03-12T15:15,, 1165.00 ,"R$ 1,145.00", Taylor Brooks ,CUIABA, 48 
+SO0064,Taylor Price,+55 65 95081-5179, Atlas Logistics Hub ,B2B SUPPORT,Notebook,DELIVERED,2026-03-14T08:45,2026-03-18T21:45,"R$ 1,180.00", 1180.00 ,MORGAN REED, Varzea Grande , 24 
+SO0065,Avery Brooks,+55 65 97002-1493, Prime Edu Center ,Computer Repair,desktop, Cancelled ,2026-03-16T09:15,, 665.00 , 0.00 , Cameron Shaw , Sinop , 72 
+SO0066,Jordan Perry,65 99137-7272, Nova Realty Partners ,onsite visit,Network Router,awaiting part,2026-03-12T10:45,, 830.00 ,R$ 810.00, Avery Cole , Rondonopolis , 24 
+SO0067,Riley Gray,+55 65 92172-9252, Retail Direct ,COMPUTER REPAIR,Printer,DELIVERED,2026-03-14T11:15,2026-03-19T11:15, 565.00 , 520.00 , Jordan Ellis , Cuiaba , 48 
+SO0068,Skyler Jordan,+55 65 99963-6544, Retail Direct ,Computer Repair,Notebook,Delivered,2026-03-16T12:45,2026-03-21T16:45,R$ 610.00, 610.00 , Taylor Brooks , Cuiaba , 48 
+SO0069,Riley Gray,+55 65 97686-1478, Orion Legal Group , computer repair ,Desktop, delivered ,2026-03-18T13:15,2026-03-23T21:15, 595.00 ,R$ 580.00, Morgan Reed , Cuiaba , 48 
+SO0070,HARPER DIAZ,+55 65 96158-5617, Verde Health Clinic ,ONSITE VISIT,pos terminal,IN REPAIR,2026-03-20T14:45,, 1010.00 , 980.00 , Cameron Shaw ,CUIABA, 24 
+SO0071,Casey Parker,+55 65 95098-6743, Atlas Logistics Hub , B2B Support ,Network Router,Delivered,2026-03-22T15:15,2026-03-27T21:15, 1235.00 , 1190.00 , Avery Cole , Varzea Grande , 48 
+SO0072,Harper Diaz,65 94095-9517,NOVA REALTY PARTNERS,b2b support,Notebook,ready for pickup,2026-03-18T08:45,,"R$ 1,040.00","R$ 1,020.00",JORDAN ELLIS, Rondonopolis , 24 

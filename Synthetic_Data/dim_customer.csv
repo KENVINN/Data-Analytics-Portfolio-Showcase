@@ -1,0 +1,49 @@
+customer_id,company_id,customer_name,phone_number,city,customer_type
+CUST001,CO001,Alex Mason,+55 65 97093-2345,Cuiaba,Retail
+CUST002,CO001,Jordan Perry,+55 65 92829-4712,Cuiaba,Retail
+CUST003,CO001,Taylor Price,+55 65 92762-7319,Cuiaba,Retail
+CUST004,CO001,Morgan Ward,+55 65 93925-4104,Cuiaba,Retail
+CUST005,CO001,Casey Parker,+55 65 93748-5617,Cuiaba,Retail
+CUST006,CO001,Riley Gray,+55 65 92172-9252,Cuiaba,Retail
+CUST007,CO001,Jamie Morris,+55 65 91385-3076,Cuiaba,Retail
+CUST008,CO001,Cameron Carter,+55 65 91112-6435,Cuiaba,Retail
+CUST009,CO001,Drew Hayes,+55 65 96759-6009,Cuiaba,Retail
+CUST010,CO001,Avery Brooks,+55 65 96924-7059,Cuiaba,Retail
+CUST011,CO001,Parker Reed,+55 65 92843-2506,Cuiaba,Retail
+CUST012,CO001,Logan Bennett,+55 65 96404-4307,Cuiaba,Retail
+CUST013,CO001,Harper Diaz,+55 65 94782-5555,Cuiaba,Retail
+CUST014,CO001,Skyler Jordan,+55 65 99963-6544,Cuiaba,Retail
+CUST015,CO001,Blake Turner,+55 65 93874-4594,Cuiaba,Retail
+CUST016,CO001,Alex Mason,+55 65 92137-2005,Cuiaba,Retail
+CUST017,CO001,Jordan Perry,+55 65 98653-2908,Cuiaba,Retail
+CUST018,CO001,Taylor Price,+55 65 95958-4595,Cuiaba,Retail
+CUST019,CO002,Morgan Ward,+55 65 94543-3936,Cuiaba,B2B
+CUST020,CO002,Casey Parker,+55 65 91715-2753,Cuiaba,B2B
+CUST021,CO002,Riley Gray,+55 65 97686-1478,Cuiaba,B2B
+CUST022,CO002,Jamie Morris,+55 65 99974-4803,Cuiaba,B2B
+CUST023,CO002,Cameron Carter,+55 65 93864-7907,Cuiaba,B2B
+CUST024,CO002,Drew Hayes,+55 65 94637-6626,Cuiaba,B2B
+CUST025,CO003,Avery Brooks,+55 65 99229-2483,Cuiaba,B2B
+CUST026,CO003,Parker Reed,+55 65 95902-7731,Cuiaba,B2B
+CUST027,CO003,Logan Bennett,+55 65 97888-3543,Cuiaba,B2B
+CUST028,CO003,Harper Diaz,+55 65 96158-5617,Cuiaba,B2B
+CUST029,CO003,Skyler Jordan,+55 65 97727-8872,Cuiaba,B2B
+CUST030,CO003,Blake Turner,+55 65 95484-6767,Cuiaba,B2B
+CUST031,CO004,Alex Mason,+55 65 97964-6189,Varzea Grande,B2B
+CUST032,CO004,Jordan Perry,+55 65 96724-1912,Varzea Grande,B2B
+CUST033,CO004,Taylor Price,+55 65 95081-5179,Varzea Grande,B2B
+CUST034,CO004,Morgan Ward,+55 65 97155-7534,Varzea Grande,B2B
+CUST035,CO004,Casey Parker,+55 65 95098-6743,Varzea Grande,B2B
+CUST036,CO004,Riley Gray,+55 65 98909-3446,Varzea Grande,B2B
+CUST037,CO005,Jamie Morris,+55 65 98629-8972,Sinop,B2B
+CUST038,CO005,Cameron Carter,+55 65 98377-3110,Sinop,B2B
+CUST039,CO005,Drew Hayes,+55 65 91031-3088,Sinop,B2B
+CUST040,CO005,Avery Brooks,+55 65 97002-1493,Sinop,B2B
+CUST041,CO005,Parker Reed,+55 65 95491-6956,Sinop,B2B
+CUST042,CO005,Logan Bennett,+55 65 92409-2173,Sinop,B2B
+CUST043,CO006,Harper Diaz,+55 65 94095-9517,Rondonopolis,B2B
+CUST044,CO006,Skyler Jordan,+55 65 92386-7081,Rondonopolis,B2B
+CUST045,CO006,Blake Turner,+55 65 94118-5713,Rondonopolis,B2B
+CUST046,CO006,Alex Mason,+55 65 92482-5345,Rondonopolis,B2B
+CUST047,CO006,Jordan Perry,+55 65 99137-7272,Rondonopolis,B2B
+CUST048,CO006,Taylor Price,+55 65 92017-5855,Rondonopolis,B2B

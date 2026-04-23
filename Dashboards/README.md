@@ -12,9 +12,9 @@ I design dashboards with three layers in mind:
 
 ## KPI Structure I Prefer
 
-- Outcome KPIs: revenue, retention, SLA compliance, churn, member engagement
-- Diagnostic KPIs: segment mix, partner performance, aging buckets, resolution stages
-- Action KPIs: accounts at risk, tickets breaching SLA, inactive members, backlog owners
+- Outcome KPIs: revenue, gross margin, SLA compliance, quote approval, recall recovery
+- Diagnostic KPIs: service line performance, aging buckets, resolution stages, technician workload
+- Action KPIs: orders at risk, pending quotes, unlinked costs, recall targets
 - Trust signals: last refresh timestamp, metric definitions, filter context, and exception notes
 
 ## Example 1: Decision Layer Dashboard
@@ -61,7 +61,7 @@ UX choices:
 
 I typically design dashboards on top of a simple and scalable analytical model:
 
-- Fact tables for events such as check-ins, bookings, invoices, subscriptions, or tickets
-- Dimension tables for entities such as member, partner, account, technician, or calendar
+- Fact tables for events such as service orders, status history, cost entries, and customer follow-ups
+- Dimension tables for entities such as customer, company, technician, device, or calendar
 - Clear date grain and business definitions to avoid duplicated logic in the BI layer
 - Reusable measures so KPI calculations remain consistent across reports

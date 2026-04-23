@@ -1,0 +1,7 @@
+company_id,company_name,account_type,city,region,contract_status
+CO001,Retail Direct,Retail,Cuiaba,Midwest,active
+CO002,Orion Legal Group,B2B,Cuiaba,Midwest,active
+CO003,Verde Health Clinic,B2B,Cuiaba,Midwest,active
+CO004,Atlas Logistics Hub,B2B,Varzea Grande,Midwest,active
+CO005,Prime Edu Center,B2B,Sinop,North,active
+CO006,Nova Realty Partners,B2B,Rondonopolis,South,active
