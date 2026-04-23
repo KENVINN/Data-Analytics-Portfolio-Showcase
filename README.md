@@ -71,7 +71,7 @@ I am pursuing opportunities where data can improve prioritization, operational v
 
 ## Contact
 
-- LinkedIn: [linkedin.com/in/your-linkedin-handle](https://www.linkedin.com/in/your-linkedin-handle/)
+- LinkedIn: www.linkedin.com/in/kevin-savio-data
 
 Replace the LinkedIn handle above with your public profile before publishing the repository.
 
