@@ -44,17 +44,53 @@ Synthetic BI case focused on operational support performance and decision suppor
 Data-Analytics-Portfolio-Showcase/
 |-- README.md
 |-- .gitignore
+|-- requirements.txt
 |-- SQL_Challenges/
 |   |-- 01_gym_partner_engagement_analysis.sql
 |   |-- 02_saas_subscription_health.sql
 |   `-- 03_member_lifecycle_reactivation.sql
 |-- Python_Automation/
-|   `-- clean_membership_data.py
+|   |-- clean_membership_data.py
+|   `-- generate_synthetic_portfolio_data.py
+|-- Synthetic_Data/
+|   |-- README.md
+|   |-- dim_partner.csv
+|   |-- dim_member.csv
+|   |-- fact_membership.csv
+|   |-- fact_checkin.csv
+|   |-- fact_class_booking.csv
+|   |-- membership_export_raw.csv
+|   |-- membership_export_clean.csv
+|   |-- dim_account.csv
+|   |-- dim_plan.csv
+|   |-- fact_subscription_snapshot.csv
+|   `-- it_service_tickets.csv
 `-- Dashboards/
     |-- README.md
     `-- assets/
         |-- dashboard-executive-overview.jpg
         `-- dashboard-operational-input.jpg
+```
+
+## Synthetic Data Pack
+
+This repository also includes a reproducible synthetic data pack so the portfolio can be explored without any dependency on real business data.
+
+- Gym engagement tables for SQL analysis and lifecycle segmentation
+- SaaS revenue snapshots for MRR, churn, and expansion analysis
+- Service ticket data for dashboard and operational KPI prototyping
+- A deliberately messy membership export for Python-based data cleaning
+- A cleaned membership export that demonstrates the output of the pandas workflow
+
+## Quick Start
+
+```bash
+pip install -r requirements.txt
+python Python_Automation/generate_synthetic_portfolio_data.py
+python Python_Automation/clean_membership_data.py \
+  --input Synthetic_Data/membership_export_raw.csv \
+  --output Synthetic_Data/membership_export_clean.csv \
+  --reference-date 2026-04-15
 ```
 
 ## How This Portfolio Creates Business Value
@@ -70,6 +106,4 @@ I am pursuing opportunities where data can improve prioritization, operational v
 
 ## Contact
 
-- LinkedIn: www.linkedin.com/in/kevin-savio-data
-
-Replace the LinkedIn handle above with your public profile before publishing the repository.
+- LinkedIn: [linkedin.com/in/kevin-savio-data](https://www.linkedin.com/in/kevin-savio-data/)

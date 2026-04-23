@@ -3,9 +3,9 @@ Clean a synthetic gym membership export and prepare it for BI consumption.
 
 Example:
     python clean_membership_data.py \
-        --input data/raw/membership_export.csv \
-        --output data/processed/membership_export_clean.csv \
-        --reference-date 2026-01-31
+        --input Synthetic_Data/membership_export_raw.csv \
+        --output Synthetic_Data/membership_export_clean.csv \
+        --reference-date 2026-04-15
 
 This script is intended for portfolio demonstration only.
 It does not use or reference any real customer or company data.
@@ -229,4 +229,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
