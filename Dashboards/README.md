@@ -1,6 +1,6 @@
 # Dashboard Design Notes
 
-This folder shows how I structure BI dashboards for decision-making, KPI storytelling, and executive usability. The examples below are based on synthetic scenarios only and were designed to reflect how I typically organize metrics for business and operations audiences.
+This folder shows how I structure BI dashboards for decision-making, KPI storytelling, and executive usability. The screenshots below come from real product screens in a working application context, with values intentionally zeroed, masked, or generic to preserve confidentiality.
 
 ## Dashboard Strategy
 
@@ -17,56 +17,37 @@ I design dashboards with three layers in mind:
 - Action KPIs: accounts at risk, tickets breaching SLA, inactive members, backlog owners
 - Trust signals: last refresh timestamp, metric definitions, filter context, and exception notes
 
-## Example 1: Executive Overview
+## Example 1: Decision Layer Dashboard
 
-![Executive Overview Placeholder](./assets/executive-overview-placeholder.svg)
+![Real Executive Dashboard Screenshot](./assets/dashboard-executive-overview.jpg)
 
-Typical content:
+What this screen is designed to do:
 
-- 4 to 6 top KPI cards with short labels and strong contrast
-- A monthly trend line for quick pattern recognition
-- Comparison against target or previous period
-- One summary chart to show where attention should go first
-
-UX choices:
-
-- Important numbers are placed in the top-left reading area
-- Color is used sparingly and reserved for meaning, not decoration
-- Labels are written in business language instead of technical field names
-
-## Example 2: Partner Engagement View
-
-![Partner Engagement Placeholder](./assets/partner-engagement-placeholder.svg)
-
-Typical content:
-
-- Ranking table for partner gyms by engagement score
-- Member activity trend by month
-- Filters for region, partner, plan type, and cohort
-- Risk indicators for declining attendance or high inactivity share
+- Show financial and operational status within the first few seconds
+- Centralize revenue, cost, margin, and blocked-value indicators in one place
+- Expose exception signals early so managers can act before the issue impacts cash flow
 
 UX choices:
 
-- Tables support drill-down, but the first screen still answers the main business question
-- Benchmarks and trend deltas are visible without extra clicks
-- Slicers are grouped to avoid clutter and inconsistent navigation
+- KPI cards are grouped in a predictable scan order
+- Filters stay visible near the top because date range and service line change interpretation
+- Navigation separates business domains such as profitability, operations, pricing, and recall
 
-## Example 3: IT Service Efficiency View
+## Example 2: Operational Input Layer
 
-![Service Efficiency Placeholder](./assets/service-efficiency-placeholder.svg)
+![Real Operational Input Screenshot](./assets/dashboard-operational-input.jpg)
 
-Typical content:
+Why this screen matters for BI quality:
 
-- SLA attainment, backlog aging, and first response time in the header
-- Ticket flow by status and priority
-- Team or technician view for workload balancing
-- Open issues requiring intervention highlighted in a focused detail section
+- Reliable dashboards depend on consistent operational data capture upstream
+- Structured form inputs reduce ambiguity in ticket, device, customer, and service-stage records
+- Standardized status transitions improve SLA analysis, bottleneck detection, and backlog visibility
 
 UX choices:
 
-- Operational metrics are separated from executive metrics to reduce noise
-- Aging buckets are prioritized because they support daily management decisions
-- The page layout supports both scan-first behavior and detailed diagnosis
+- Required fields are visually obvious, reducing missing-data risk
+- Process stages are explicit, helping convert operational actions into analytical events
+- The form keeps business language close to the workflow, which improves adoption and data consistency
 
 ## UX Principles I Apply in BI
 
@@ -84,4 +65,3 @@ I typically design dashboards on top of a simple and scalable analytical model:
 - Dimension tables for entities such as member, partner, account, technician, or calendar
 - Clear date grain and business definitions to avoid duplicated logic in the BI layer
 - Reusable measures so KPI calculations remain consistent across reports
-

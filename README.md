@@ -53,9 +53,8 @@ Data-Analytics-Portfolio-Showcase/
 `-- Dashboards/
     |-- README.md
     `-- assets/
-        |-- executive-overview-placeholder.svg
-        |-- partner-engagement-placeholder.svg
-        `-- service-efficiency-placeholder.svg
+        |-- dashboard-executive-overview.jpg
+        `-- dashboard-operational-input.jpg
 ```
 
 ## How This Portfolio Creates Business Value
@@ -74,4 +73,3 @@ I am pursuing opportunities where data can improve prioritization, operational v
 - LinkedIn: www.linkedin.com/in/kevin-savio-data
 
 Replace the LinkedIn handle above with your public profile before publishing the repository.
-
