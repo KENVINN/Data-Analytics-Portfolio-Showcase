@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Service Efficiency Placeholder</title>
+  <desc id="desc">Placeholder layout for an IT service efficiency dashboard.</desc>
+  <rect width="1280" height="720" fill="#f3f4f8" />
+  <rect x="40" y="32" width="1200" height="72" rx="18" fill="#283b66" />
+  <text x="72" y="77" fill="#fbfcff" font-family="Arial, sans-serif" font-size="30" font-weight="700">IT Service Efficiency Dashboard</text>
+  <rect x="40" y="136" width="230" height="120" rx="20" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="290" y="136" width="230" height="120" rx="20" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="540" y="136" width="230" height="120" rx="20" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="790" y="136" width="230" height="120" rx="20" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="1040" y="136" width="200" height="120" rx="20" fill="#ffffff" stroke="#cfd7ea" />
+  <text x="72" y="178" fill="#283b66" font-family="Arial, sans-serif" font-size="18">KPI Card</text>
+  <text x="322" y="178" fill="#283b66" font-family="Arial, sans-serif" font-size="18">KPI Card</text>
+  <text x="572" y="178" fill="#283b66" font-family="Arial, sans-serif" font-size="18">KPI Card</text>
+  <text x="822" y="178" fill="#283b66" font-family="Arial, sans-serif" font-size="18">KPI Card</text>
+  <text x="1072" y="178" fill="#283b66" font-family="Arial, sans-serif" font-size="18">KPI Card</text>
+  <rect x="40" y="292" width="500" height="368" rx="22" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="565" y="292" width="320" height="368" rx="22" fill="#ffffff" stroke="#cfd7ea" />
+  <rect x="910" y="292" width="330" height="368" rx="22" fill="#ffffff" stroke="#cfd7ea" />
+  <text x="72" y="336" fill="#283b66" font-family="Arial, sans-serif" font-size="22" font-weight="700">Backlog Aging</text>
+  <text x="597" y="336" fill="#283b66" font-family="Arial, sans-serif" font-size="22" font-weight="700">SLA by Priority</text>
+  <text x="942" y="336" fill="#283b66" font-family="Arial, sans-serif" font-size="22" font-weight="700">Team Workload</text>
+  <rect x="88" y="580" width="80" height="48" rx="10" fill="#d6634f" />
+  <rect x="190" y="520" width="80" height="108" rx="10" fill="#e58a57" />
+  <rect x="292" y="470" width="80" height="158" rx="10" fill="#f0b25f" />
+  <rect x="394" y="430" width="80" height="198" rx="10" fill="#7f9de0" />
+  <circle cx="725" cy="500" r="90" fill="none" stroke="#d7deef" stroke-width="28" />
+  <path d="M725 410 A90 90 0 1 1 640 530" fill="none" stroke="#516fb8" stroke-width="28" stroke-linecap="round" />
+</svg>

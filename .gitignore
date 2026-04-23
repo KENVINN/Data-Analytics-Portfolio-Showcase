@@ -1,0 +1,50 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+pip-wheel-metadata/
+
+# Jupyter and data science artifacts
+.ipynb_checkpoints/
+data/raw/
+data/interim/
+data/processed/
+outputs/
+
+# Testing and caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+.python-version
+
+# Databases and temporary files
+*.db
+*.sqlite
+*.log
+
+# Editor and operating system files
+.DS_Store
+.idea/
+.vscode/
+
